@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Insights — Infinite Designs</title>
+<meta name="description" content="Engineering and design writing from the studio — ERP, performance, AI cost, design systems, security and offline-first development.">
+<meta name="theme-color" content="#07060D">
+<link rel="canonical" href="https://infinitedesigns.com.bd/insights">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infinite Designs">
+<meta property="og:title" content="Insights — Infinite Designs">
+<meta property="og:description" content="Engineering and design writing from the studio — ERP, performance, AI cost, design systems, security and offline-first development.">
+<meta property="og:url" content="https://infinitedesigns.com.bd/insights">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="lw">
+    <svg viewBox="0 0 120 60" aria-hidden="true">
+      <defs><linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs>
+      <path class="draw" d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#lgrad)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="pc" id="loadpc">00</div>
+  </div>
+</div>
+
+<canvas id="delta" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a href="/" class="brand" aria-label="Infinite Designs home">
+      <svg viewBox="0 0 120 60" aria-hidden="true"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"/></svg>
+      <span class="brand-name">Infinite Designs<small>Dhaka &middot; Bangladesh</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="/work">Work</a><a href="/services">Services</a><a href="/about">About</a><a href="/insights" class="on">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a></nav>
+    <div class="hdr-cta">
+      <a href="/contact" class="btn btn-pri btn-sm" data-cursor>Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <nav id="drawerNav" aria-label="Mobile"><a href="/work"><span>Work</span><span class="idx">01</span></a><a href="/services"><span>Services</span><span class="idx">02</span></a><a href="/about"><span>About</span><span class="idx">03</span></a><a href="/insights" class="on"><span>Insights</span><span class="idx">04</span></a><a href="/careers"><span>Careers</span><span class="idx">05</span></a><a href="/contact"><span>Contact</span><span class="idx">06</span></a></nav>
+  <div class="drawer-foot">
+    <span>hello@infinitedesigns.com.bd</span><span>+880 9613 800 400</span><span>Gulshan 1, Dhaka 1212</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <main id="app">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="shell">
+    <span class="eyebrow">Insights</span>
+    <h1 style="margin-top:20px;max-width:15ch">What we learned, written by the people who learned it.</h1>
+    <p class="lede" style="margin-top:26px">Engineering and design notes from live projects — including the decisions we got wrong first. No gated PDFs, no newsletter wall.</p>
+  </div>
+</section>
+<section class="sec"><div class="shell">
+  <a href="/insights/erp-rebuild-trap" class="work-card" style="grid-template-columns:1fr" data-cursor-big="">
+    <div class="work-thumb" style="aspect-ratio:21/8"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p88" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(42,34,86)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p88)"></rect><g fill="none" stroke="#7B5CFF" stroke-width="2"><rect x="40" y="46" width="180" height="100" rx="10" opacity="0.5"></rect><rect x="64" y="53" width="174" height="96" rx="10" opacity="0.46"></rect><rect x="88" y="60" width="168" height="92" rx="10" opacity="0.42"></rect><rect x="112" y="67" width="162" height="88" rx="10" opacity="0.38"></rect><rect x="136" y="74" width="156" height="84" rx="10" opacity="0.33999999999999997"></rect><rect x="160" y="81" width="150" height="80" rx="10" opacity="0.3"></rect><rect x="184" y="88" width="144" height="76" rx="10" opacity="0.26"></rect><rect x="208" y="95" width="138" height="72" rx="10" opacity="0.21999999999999997"></rect><rect x="232" y="102" width="132" height="68" rx="10" opacity="0.18"></rect><rect x="256" y="109" width="126" height="64" rx="10" opacity="0.14"></rect><rect x="280" y="116" width="120" height="60" rx="10" opacity="0.09999999999999998"></rect></g></svg></div>
+    <div class="work-body" style="padding:28px 30px 32px">
+      <div class="pm" style="font-family:var(--font-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);display:flex;gap:12px"><span>Featured</span><span>ERP</span><span style="color:var(--txt-faint)">8 min read</span></div>
+      <h3 style="max-width:22ch">Why Bangladeshi enterprises keep rebuilding the same ERP</h3>
+      <p style="max-width:62ch">Three ERP implementations in eleven years is not bad luck. It is a predictable outcome of buying a process instead of encoding one.</p>
+      <div class="by" style="font-size:.82rem;color:var(--txt-faint);margin-top:8px">Tanvir Mahmud · 4 August 2026</div>
+    </div>
+  </a>
+  <div class="grid g3" style="margin-top:28px">
+  <a href="/insights/designing-for-2g" class="post-card d2" data-cursor-big="">
+    <div class="ph"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p89" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(25,68,74)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p89)"></rect><g><circle cx="40" cy="40" r="2" fill="#3AE0D0" opacity="0.25"></circle><circle cx="87" cy="123" r="4" fill="#3AE0D0" opacity="0.39"></circle><circle cx="134" cy="46" r="6" fill="#3AE0D0" opacity="0.53"></circle><circle cx="181" cy="129" r="8" fill="#3AE0D0" opacity="0.67"></circle><circle cx="228" cy="52" r="10" fill="#3AE0D0" opacity="0.81"></circle><circle cx="275" cy="135" r="2" fill="#3AE0D0" opacity="0.25"></circle><circle cx="322" cy="58" r="4" fill="#3AE0D0" opacity="0.39"></circle><circle cx="369" cy="141" r="6" fill="#3AE0D0" opacity="0.53"></circle><circle cx="416" cy="64" r="8" fill="#3AE0D0" opacity="0.67"></circle><circle cx="463" cy="147" r="10" fill="#3AE0D0" opacity="0.81"></circle><circle cx="50" cy="70" r="2" fill="#3AE0D0" opacity="0.25"></circle><circle cx="97" cy="153" r="4" fill="#3AE0D0" opacity="0.39"></circle><circle cx="144" cy="76" r="6" fill="#3AE0D0" opacity="0.53"></circle><circle cx="191" cy="159" r="8" fill="#3AE0D0" opacity="0.67"></circle><circle cx="238" cy="82" r="10" fill="#3AE0D0" opacity="0.81"></circle><circle cx="285" cy="165" r="2" fill="#3AE0D0" opacity="0.25"></circle><circle cx="332" cy="88" r="4" fill="#3AE0D0" opacity="0.39"></circle><circle cx="379" cy="171" r="6" fill="#3AE0D0" opacity="0.53"></circle><circle cx="426" cy="94" r="8" fill="#3AE0D0" opacity="0.67"></circle><circle cx="473" cy="177" r="10" fill="#3AE0D0" opacity="0.81"></circle><circle cx="60" cy="100" r="2" fill="#3AE0D0" opacity="0.25"></circle><circle cx="107" cy="183" r="4" fill="#3AE0D0" opacity="0.39"></circle><circle cx="154" cy="106" r="6" fill="#3AE0D0" opacity="0.53"></circle><circle cx="201" cy="189" r="8" fill="#3AE0D0" opacity="0.67"></circle><circle cx="248" cy="112" r="10" fill="#3AE0D0" opacity="0.81"></circle><circle cx="295" cy="195" r="2" fill="#3AE0D0" opacity="0.25"></circle></g><path d="M30 190 Q150 60 270 150 T510 90" fill="none" stroke="#3AE0D0" stroke-width="3" stroke-linecap="round"></path></svg></div>
+    <div class="pb">
+      <div class="pm"><span>Performance</span><span style="color:var(--txt-faint)">7 min read</span></div>
+      <h4 style="font-size:1.15rem;line-height:1.25">Designing for 2G: performance budgets for the connection people actually have</h4>
+      <p>Your site is fast on the office fibre line. Here is what it feels like on a mid-range Android handset in Mirpur at six in the evening.</p>
+      <div class="by">Nusrat Jahan · 19 June 2026</div>
+    </div>
+  </a>
+  <a href="/insights/rag-production-cost" class="post-card d3" data-cursor-big="">
+    <div class="ph"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p90" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(77,55,35)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p90)"></rect><g stroke="#FFAE3B" stroke-width="2.4" fill="none"><path d="M20 30 H120" opacity="0.9" stroke-linecap="round"></path><path d="M20 54 H193" opacity="0.81" stroke-linecap="round"></path><path d="M20 78 H266" opacity="0.72" stroke-linecap="round"></path><path d="M20 102 H339" opacity="0.63" stroke-linecap="round"></path><path d="M20 126 H412" opacity="0.54" stroke-linecap="round"></path><path d="M20 150 H125" opacity="0.45000000000000007" stroke-linecap="round"></path><path d="M20 174 H198" opacity="0.36" stroke-linecap="round"></path><path d="M20 198 H271" opacity="0.27" stroke-linecap="round"></path></g></svg></div>
+    <div class="pb">
+      <div class="pm"><span>AI</span><span style="color:var(--txt-faint)">9 min read</span></div>
+      <h4 style="font-size:1.15rem;line-height:1.25">What a RAG system actually costs to run in production</h4>
+      <p>The demo costs nothing. The pipeline that keeps it accurate as your documents change is where the budget goes.</p>
+      <div class="by">Rafiul Karim · 2 May 2026</div>
+    </div>
+  </a>
+  <a href="/insights/design-system-small-studio" class="post-card d1" data-cursor-big="">
+    <div class="ph"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p91" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(77,37,56)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p91)"></rect><g fill="none" stroke="#FF6B8B" stroke-width="2.2"><circle cx="270" cy="120" r="22" opacity="0.65"></circle><circle cx="270" cy="120" r="48" opacity="0.5700000000000001"></circle><circle cx="270" cy="120" r="74" opacity="0.49"></circle><circle cx="270" cy="120" r="100" opacity="0.41000000000000003"></circle><circle cx="270" cy="120" r="126" opacity="0.33"></circle><circle cx="270" cy="120" r="152" opacity="0.25"></circle></g><circle cx="270" cy="120" r="12" fill="#FF6B8B"></circle></svg></div>
+    <div class="pb">
+      <div class="pm"><span>Design</span><span style="color:var(--txt-faint)">6 min read</span></div>
+      <h4 style="font-size:1.15rem;line-height:1.25">A design system two designers can actually maintain</h4>
+      <p>Small teams are told design systems are a luxury for big companies. The opposite is true — you need one precisely because there are two of you.</p>
+      <div class="by">Mehedi Hasan · 11 March 2026</div>
+    </div>
+  </a>
+  <a href="/insights/fintech-security-review" class="post-card d2" data-cursor-big="">
+    <div class="ph"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p92" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(26,43,84)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p92)"></rect><g><rect x="52" y="160" width="34" height="30" rx="7" fill="#3B82F6" opacity="0.3"></rect><rect x="118" y="103" width="34" height="87" rx="7" fill="#3B82F6" opacity="0.39"></rect><rect x="184" y="46" width="34" height="144" rx="7" fill="#3B82F6" opacity="0.48"></rect><rect x="250" y="119" width="34" height="71" rx="7" fill="#3B82F6" opacity="0.5700000000000001"></rect><rect x="316" y="62" width="34" height="128" rx="7" fill="#3B82F6" opacity="0.6599999999999999"></rect><rect x="382" y="135" width="34" height="55" rx="7" fill="#3B82F6" opacity="0.75"></rect><rect x="448" y="78" width="34" height="112" rx="7" fill="#3B82F6" opacity="0.8400000000000001"></rect></g></svg></div>
+    <div class="pb">
+      <div class="pm"><span>Security</span><span style="color:var(--txt-faint)">7 min read</span></div>
+      <h4 style="font-size:1.15rem;line-height:1.25">The security review most Bangladeshi fintechs fail first</h4>
+      <p>It is almost never the cryptography. It is authorisation logic, and the same three mistakes appear in nearly every first review.</p>
+      <div class="by">Rafiul Karim · 27 January 2026</div>
+    </div>
+  </a>
+  <a href="/insights/offline-first-bangladesh" class="post-card d3" data-cursor-big="">
+    <div class="ph"><svg viewBox="0 0 560 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Article illustration">
+    <defs><linearGradient id="p93" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(15,58,54)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient></defs>
+    <rect width="560" height="240" fill="url(#p93)"></rect><path d="M0 200 L0 140 L40 95 L80 71 L120 80 L160 117 L200 165 L240 201 L280 209 L320 184 L360 139 L400 94 L440 71 L480 80 L520 118 L560 166 L560 240 L0 240Z" fill="#12B981" opacity=".18"></path><path d="M0 200 L0 140 L40 95 L80 71 L120 80 L160 117 L200 165 L240 201 L280 209 L320 184 L360 139 L400 94 L440 71 L480 80 L520 118 L560 166" fill="none" stroke="#12B981" stroke-width="3"></path></svg></div>
+    <div class="pb">
+      <div class="pm"><span>Engineering</span><span style="color:var(--txt-faint)">6 min read</span></div>
+      <h4 style="font-size:1.15rem;line-height:1.25">Offline-first is not a feature here. It is the baseline.</h4>
+      <p>Building for intermittent connectivity changes your data model, not just your error handling. Better to decide that at the start.</p>
+      <div class="by">Tanvir Mahmud · 8 December 2025</div>
+    </div>
+  </a></div>
+</div></section>
+
+  <section class="sec"><div class="shell">
+    <div class="cta-band" data-par="-0.05">
+      <span class="eyebrow solo" style="justify-content:center">Start a conversation</span>
+      <h2 style="margin-top:16px">Have a question these articles didn’t answer?</h2>
+      <p class="lede">Send it over. If it is interesting we will answer it properly — and it might become the next article.</p>
+      <div class="acts"><a href="/contact" class="btn btn-pri" data-cursor="">Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a><a href="/work" class="btn btn-ghost" data-cursor="">See how we work<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+  </div></section>
+  </main>
+
+<footer class="ftr">
+    <div class="shell">
+      <div class="ftr-top">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:18px">
+            <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"></path></svg>
+            <span class="brand-name">Infinite Designs<small>Est. 2025</small></span>
+          </a>
+          <p style="color:var(--txt-dim);font-size:.92rem;max-width:34ch;line-height:1.65">A four-person digital product studio in Dhaka. Founded 2025. Forty-plus projects delivered for eighteen clients.</p>
+          <div class="soc">
+            <a href="/contact" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.1h4.2V24H.4zM8.3 8.1h4v2.2h.06c.56-1.06 1.93-2.2 3.97-2.2 4.25 0 5.03 2.8 5.03 6.43V24h-4.2v-7.6c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8.3z"></path></svg></a>
+            <a href="/contact" aria-label="Dribbble"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm7.94 5.54a10.2 10.2 0 0 1 2.3 6.38c-.34-.07-3.73-.76-7.14-.33-.08-.18-.15-.36-.23-.55-.21-.5-.44-1-.68-1.48 3.78-1.54 5.5-3.76 5.75-4.02zM12 1.78c2.55 0 4.88.96 6.65 2.53-.21.3-1.76 2.38-5.4 3.75A52.6 52.6 0 0 0 9.4 2.13 10.3 10.3 0 0 1 12 1.78zM7.43 2.83a61 61 0 0 1 3.83 5.87C6.44 9.98 2.2 9.96 1.74 9.96A10.27 10.27 0 0 1 7.43 2.83zM1.76 12.02v-.31c.45.01 5.43.08 10.54-1.46.3.57.57 1.15.83 1.73l-.4.12c-5.28 1.7-8.08 6.36-8.32 6.75a10.2 10.2 0 0 1-2.65-6.83zM12 22.25c-2.36 0-4.53-.8-6.26-2.15.18-.38 2.28-4.4 8.05-6.42l.07-.02a42.6 42.6 0 0 1 2.2 7.8A10.2 10.2 0 0 1 12 22.25zm5.8-1.74a44.6 44.6 0 0 0-2-7.65c3.2-.51 6.02.33 6.37.44a10.25 10.25 0 0 1-4.37 7.21z"></path></svg></a>
+            <a href="/contact" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.8 18 5.1 18 5.1c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+            <a href="/contact" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.3l-5.8-7.5-6.6 7.5H.6l8.6-9.8L.2 1.2h7.5l5.2 6.9zm-1.3 19.4h2L6.5 3.2H4.4z"></path></svg></a>
+          </div>
+        </div>
+        <div><h5>Services</h5><div class="ftr-col" id="ftrServices"><a href="/services/web-development">Web Development</a><a href="/services/ui-ux-design">UI/UX Design</a><a href="/services/software-development">Software Development</a><a href="/services/ai-solutions">Artificial Intelligence</a><a href="/services/digital-marketing-seo">Digital Marketing &amp; SEO</a><a href="/services/mobile-app-development">Mobile App Development</a><a href="/services/ecommerce-corporate">E-commerce &amp; Corporate Solutions</a><a href="/services/lms-solutions">LMS Solutions</a></div></div>
+        <div><h5>Company</h5><div class="ftr-col">
+          <a href="/about">About us</a><a href="/work">Case studies</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/services">All services</a>
+        </div></div>
+        <div><h5>Studio</h5><div class="ftr-col">
+          <a href="/contact">House 42, Road 11<br>Gulshan 1, Dhaka 1212</a>
+          <a href="/contact">+880 9613 800 400</a>
+          <a href="/contact">hello@infinitedesigns.com.bd</a>
+          <a href="/careers">careers@infinitedesigns.com.bd</a>
+        </div>
+        <p class="disclosure" style="margin-top:18px">Portfolio, client names and testimonials on this site are sample content created to demonstrate the layout. Replace them with your own before going live.</p>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <span>© 2026 Infinite Designs Ltd. All rights reserved.</span>
+        <div class="links"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a><a href="/contact">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

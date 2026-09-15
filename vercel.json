@@ -1,0 +1,151 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/insights/design-system-small-studio",
+      "destination": "/insights-design-system-small-studio.html"
+    },
+    {
+      "source": "/insights/designing-for-2g",
+      "destination": "/insights-designing-for-2g.html"
+    },
+    {
+      "source": "/insights/erp-rebuild-trap",
+      "destination": "/insights-erp-rebuild-trap.html"
+    },
+    {
+      "source": "/insights/fintech-security-review",
+      "destination": "/insights-fintech-security-review.html"
+    },
+    {
+      "source": "/insights/offline-first-bangladesh",
+      "destination": "/insights-offline-first-bangladesh.html"
+    },
+    {
+      "source": "/insights/rag-production-cost",
+      "destination": "/insights-rag-production-cost.html"
+    },
+    {
+      "source": "/services/ai-solutions",
+      "destination": "/services-ai-solutions.html"
+    },
+    {
+      "source": "/services/cybersecurity-infrastructure",
+      "destination": "/services-cybersecurity-infrastructure.html"
+    },
+    {
+      "source": "/services/data-analytics-ai",
+      "destination": "/services-data-analytics-ai.html"
+    },
+    {
+      "source": "/services/digital-marketing-seo",
+      "destination": "/services-digital-marketing-seo.html"
+    },
+    {
+      "source": "/services/ecommerce-corporate",
+      "destination": "/services-ecommerce-corporate.html"
+    },
+    {
+      "source": "/services/erp-automation",
+      "destination": "/services-erp-automation.html"
+    },
+    {
+      "source": "/services/lms-solutions",
+      "destination": "/services-lms-solutions.html"
+    },
+    {
+      "source": "/services/mobile-app-development",
+      "destination": "/services-mobile-app-development.html"
+    },
+    {
+      "source": "/services/retail-solutions",
+      "destination": "/services-retail-solutions.html"
+    },
+    {
+      "source": "/services/saas-development",
+      "destination": "/services-saas-development.html"
+    },
+    {
+      "source": "/services/software-development",
+      "destination": "/services-software-development.html"
+    },
+    {
+      "source": "/services/ui-ux-design",
+      "destination": "/services-ui-ux-design.html"
+    },
+    {
+      "source": "/services/web-development",
+      "destination": "/services-web-development.html"
+    },
+    {
+      "source": "/work/aurelia-living",
+      "destination": "/work-aurelia-living.html"
+    },
+    {
+      "source": "/work/bayleaf-hospitality",
+      "destination": "/work-bayleaf-hospitality.html"
+    },
+    {
+      "source": "/work/cirrus-energy",
+      "destination": "/work-cirrus-energy.html"
+    },
+    {
+      "source": "/work/lumenpay",
+      "destination": "/work-lumenpay.html"
+    },
+    {
+      "source": "/work/ostara-bank",
+      "destination": "/work-ostara-bank.html"
+    },
+    {
+      "source": "/work/prottasha-health",
+      "destination": "/work-prottasha-health.html"
+    },
+    {
+      "source": "/work/rundo-logistics",
+      "destination": "/work-rundo-logistics.html"
+    },
+    {
+      "source": "/work/skolar",
+      "destination": "/work-skolar.html"
+    },
+    {
+      "source": "/work/textura-mills",
+      "destination": "/work-textura-mills.html"
+    },
+    {
+      "source": "/work/veloce-retail",
+      "destination": "/work-veloce-retail.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(styles.css|site.js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

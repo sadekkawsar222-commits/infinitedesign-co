@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Infinite Designs</title>
+<meta name="description" content="Tell us what you are trying to build. You will hear back within one working day, from one of the four of us by name.">
+<meta name="theme-color" content="#07060D">
+<link rel="canonical" href="https://infinitedesigns.com.bd/contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infinite Designs">
+<meta property="og:title" content="Contact — Infinite Designs">
+<meta property="og:description" content="Tell us what you are trying to build. You will hear back within one working day, from one of the four of us by name.">
+<meta property="og:url" content="https://infinitedesigns.com.bd/contact">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="lw">
+    <svg viewBox="0 0 120 60" aria-hidden="true">
+      <defs><linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs>
+      <path class="draw" d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#lgrad)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="pc" id="loadpc">00</div>
+  </div>
+</div>
+
+<canvas id="delta" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a href="/" class="brand" aria-label="Infinite Designs home">
+      <svg viewBox="0 0 120 60" aria-hidden="true"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"/></svg>
+      <span class="brand-name">Infinite Designs<small>Dhaka &middot; Bangladesh</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="/work">Work</a><a href="/services">Services</a><a href="/about">About</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact" class="on">Contact</a></nav>
+    <div class="hdr-cta">
+      <a href="/contact" class="btn btn-pri btn-sm" data-cursor>Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <nav id="drawerNav" aria-label="Mobile"><a href="/work"><span>Work</span><span class="idx">01</span></a><a href="/services"><span>Services</span><span class="idx">02</span></a><a href="/about"><span>About</span><span class="idx">03</span></a><a href="/insights"><span>Insights</span><span class="idx">04</span></a><a href="/careers"><span>Careers</span><span class="idx">05</span></a><a href="/contact" class="on"><span>Contact</span><span class="idx">06</span></a></nav>
+  <div class="drawer-foot">
+    <span>hello@infinitedesigns.com.bd</span><span>+880 9613 800 400</span><span>Gulshan 1, Dhaka 1212</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <main id="app">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="shell">
+    <span class="eyebrow">Contact</span>
+    <h1 style="margin-top:20px;max-width:15ch">Tell us what you’re trying to build.</h1>
+    <p class="lede" style="margin-top:26px">You will hear back within one working day, and the first call is with a senior designer or engineer rather than a salesperson.</p>
+  </div>
+</section>
+
+<section class="sec"><div class="shell">
+  <div class="cs-split">
+    <div class="">
+      <div class="panel">
+        <span class="mini-head">Dhaka headquarters</span>
+        <p style="font-size:1rem;line-height:1.7">House 42, Road 11<br>Gulshan 1, Dhaka 1212<br>Bangladesh</p>
+        <div style="height:1px;background:var(--line);margin:20px 0"></div>
+        <span class="mini-head">Direct</span>
+        <div class="stack" style="gap:8px;font-size:.95rem">
+          <a href="/contact" class="link-i" style="border:0;padding:0">hello@infinitedesigns.com.bd</a>
+          <a href="/careers" class="link-i" style="border:0;padding:0">careers@infinitedesigns.com.bd</a>
+          <span style="color:var(--txt-dim)">+880 9613 800 400</span>
+          <span style="color:var(--txt-dim)">+880 1711 245 880 (WhatsApp)</span>
+        </div>
+        <div style="height:1px;background:var(--line);margin:20px 0"></div>
+        <span class="mini-head">Hours</span>
+        <p style="font-size:.92rem;color:var(--txt-dim)">Sunday–Thursday, 09:30–18:30 (GMT+6)<br>At least four hours’ overlap with every client time zone we serve.</p>
+      </div>
+      <div class="office-map d1" style="margin-top:16px"><svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylised map of the Gulshan area, Dhaka">
+    <rect width="640" height="360" fill="#0B0A14"></rect>
+    <g stroke="#ffffff" stroke-opacity=".07" stroke-width="1"><path d="M0 0V360"></path><path d="M44 0V360"></path><path d="M88 0V360"></path><path d="M132 0V360"></path><path d="M176 0V360"></path><path d="M220 0V360"></path><path d="M264 0V360"></path><path d="M308 0V360"></path><path d="M352 0V360"></path><path d="M396 0V360"></path><path d="M440 0V360"></path><path d="M484 0V360"></path><path d="M528 0V360"></path><path d="M572 0V360"></path><path d="M616 0V360"></path><path d="M660 0V360"></path><path d="M0 0H640"></path><path d="M0 44H640"></path><path d="M0 88H640"></path><path d="M0 132H640"></path><path d="M0 176H640"></path><path d="M0 220H640"></path><path d="M0 264H640"></path><path d="M0 308H640"></path><path d="M0 352H640"></path></g>
+    <path d="M-20 250 C 120 230 180 300 300 286 C 420 272 500 320 660 296" fill="none" stroke="#3AE0D0" stroke-opacity=".22" stroke-width="16" stroke-linecap="round"></path>
+    <path d="M-20 250 C 120 230 180 300 300 286 C 420 272 500 320 660 296" fill="none" stroke="#3AE0D0" stroke-opacity=".5" stroke-width="2"></path>
+    <g fill="#ffffff" fill-opacity=".05"><rect x="26" y="30" width="34" height="28" rx="4"></rect><rect x="105" y="143" width="56" height="48" rx="4"></rect><rect x="184" y="256" width="78" height="68" rx="4"></rect><rect x="263" y="139" width="100" height="28" rx="4"></rect><rect x="342" y="252" width="34" height="48" rx="4"></rect><rect x="421" y="135" width="56" height="68" rx="4"></rect><rect x="500" y="248" width="78" height="28" rx="4"></rect><rect x="579" y="131" width="100" height="48" rx="4"></rect><rect x="78" y="244" width="34" height="68" rx="4"></rect><rect x="157" y="127" width="56" height="28" rx="4"></rect><rect x="236" y="240" width="78" height="48" rx="4"></rect><rect x="315" y="123" width="100" height="68" rx="4"></rect><rect x="394" y="236" width="34" height="28" rx="4"></rect><rect x="473" y="119" width="56" height="48" rx="4"></rect><rect x="552" y="232" width="78" height="68" rx="4"></rect><rect x="51" y="115" width="100" height="28" rx="4"></rect><rect x="130" y="228" width="34" height="48" rx="4"></rect><rect x="209" y="111" width="56" height="68" rx="4"></rect><rect x="288" y="224" width="78" height="28" rx="4"></rect><rect x="367" y="107" width="100" height="48" rx="4"></rect><rect x="446" y="220" width="34" height="68" rx="4"></rect><rect x="525" y="103" width="56" height="28" rx="4"></rect></g>
+    <path d="M60 120 H580" stroke="#7B5CFF" stroke-opacity=".35" stroke-width="7" stroke-linecap="round"></path>
+    <path d="M330 20 V330" stroke="#7B5CFF" stroke-opacity=".2" stroke-width="5" stroke-linecap="round"></path>
+    <g transform="translate(330 120)">
+      <circle r="46" fill="#7B5CFF" opacity=".12"></circle><circle r="26" fill="#7B5CFF" opacity=".2"></circle>
+      <path d="M0-22a13 13 0 0 1 13 13c0 9-13 23-13 23S-13 0-13-9A13 13 0 0 1 0-22z" fill="#3AE0D0"></path><circle cy="-9" r="4.6" fill="#0B0A14"></circle>
+    </g>
+    <text x="352" y="160" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="2" fill="#A5A2C2">GULSHAN 1</text>
+    <text x="40" y="330" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="2" fill="#6E6B8E">HATIRJHEEL</text>
+  </svg></div>
+      <div class="grid g2" style="margin-top:16px">
+        <div class="panel" style="padding:20px"><span class="mini-head">Who replies</span><p style="font-size:.9rem;color:var(--txt-dim)">One of the four of us, by name. There is no enquiries inbox and no account manager in between.</p></div>
+        <div class="panel" style="padding:20px"><span class="mini-head">Response time</span><p style="font-size:.9rem;color:var(--txt-dim)">Median 4 hours during business days. Always within one working day.</p></div>
+      </div>
+    </div>
+
+    <div class="d1">
+      <form class="form panel" id="contactForm" novalidate="">
+        <h3>Project enquiry</h3>
+        <div class="field"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Rafiul Karim"><span class="err">Please tell us your name.</span></div>
+        <div class="grid g2" style="gap:16px">
+          <div class="field"><label for="cf-email">Work email</label><input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com"><span class="err">Please enter a valid email address.</span></div>
+          <div class="field"><label for="cf-company">Company</label><input id="cf-company" name="company" type="text" autocomplete="organization" placeholder="Company name"><span class="err">Please tell us where you work.</span></div>
+        </div>
+        <div class="field">
+          <label>What do you need?</label>
+          <div class="pill-set">
+            <span><input type="checkbox" id="sv-0" name="service" value="Web Development"><label for="sv-0">Web Development</label></span><span><input type="checkbox" id="sv-1" name="service" value="UI/UX Design"><label for="sv-1">UI/UX Design</label></span><span><input type="checkbox" id="sv-2" name="service" value="Software Development"><label for="sv-2">Software Development</label></span><span><input type="checkbox" id="sv-3" name="service" value="Artificial Intelligence (AI) Solutions"><label for="sv-3">Artificial Intelligence</label></span><span><input type="checkbox" id="sv-4" name="service" value="Digital Marketing &amp; SEO"><label for="sv-4">Digital Marketing &amp; SEO</label></span><span><input type="checkbox" id="sv-5" name="service" value="Mobile App Development"><label for="sv-5">Mobile App Development</label></span><span><input type="checkbox" id="sv-6" name="service" value="E-commerce &amp; Corporate Solutions"><label for="sv-6">E-commerce &amp; Corporate Solutions</label></span><span><input type="checkbox" id="sv-7" name="service" value="LMS Solutions"><label for="sv-7">LMS Solutions</label></span>
+          </div>
+        </div>
+        <div class="grid g2" style="gap:16px">
+          <div class="field"><label for="cf-budget">Indicative budget</label>
+            <select id="cf-budget" name="budget">
+              <option value="">Select a range</option>
+              <option>Under ৳8,00,000</option><option>৳8,00,000 – ৳25,00,000</option><option>৳25,00,000 – ৳1,00,00,000</option><option>Above ৳1,00,00,000</option><option>Not sure yet</option>
+            </select><span class="err">Please choose a range — an approximate one is fine.</span></div>
+          <div class="field"><label for="cf-when">Ideal start</label>
+            <select id="cf-when" name="timeline"><option value="">Select a timeline</option><option>Immediately</option><option>Within a month</option><option>This quarter</option><option>Still exploring</option></select>
+            <span class="err">Please choose a timeline.</span></div>
+        </div>
+        <div class="field"><label for="cf-msg">About the project</label><textarea id="cf-msg" name="message" placeholder="What are you trying to build, and what does success look like? If there is a number you need to move, tell us what it is today."></textarea><span class="err">A sentence or two is enough to start.</span></div>
+        <button type="submit" class="btn btn-pri" style="width:fit-content" data-cursor="">Send enquiry<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></button>
+        <p class="form-note">By sending this you agree to our <a href="/privacy" style="color:var(--cyan)">privacy policy</a>. We reply within one working day and we do not add you to a mailing list.</p>
+      </form>
+      <div class="form-ok" id="formOk">
+        <h3 style="color:var(--cyan)">Enquiry ready to send</h3>
+        <p style="margin-top:12px;color:var(--txt-dim)">Your details validated correctly. This demonstration site has no server attached yet, so nothing has been transmitted — connect the form to your email service, CRM or a form endpoint to go live.</p>
+        <p style="margin-top:12px;color:var(--txt-dim)">In the meantime, write to <strong style="color:var(--txt)">hello@infinitedesigns.com.bd</strong> and we will pick it up the same day.</p>
+        <button class="btn btn-ghost btn-sm" id="formReset" style="margin-top:18px">Edit the enquiry</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Before you write</span>
+    <div class="row">
+      <h2 style="max-width:18ch">The questions we are asked most.</h2>
+      
+    </div>
+    
+  </div>
+  <div class="acc"><div class="acc-item"><button class="acc-btn" type="button"><span>How do projects usually start?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>With a conversation and, if it is useful, a paid discovery sprint of one to three weeks. Discovery produces a scope, an architecture direction and a fixed quote — and it is yours to take elsewhere if you decide not to continue with us.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>What does a project cost?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>Fixed-scope projects generally start around ৳4,50,000 for a focused build, with most of our first-year work landing between ৳6,00,000 and ৳30,00,000. A monthly partnership starts at ৳2,80,000. We quote after discovery, not before, because a number given without understanding the problem is a guess.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>Do you work with international clients?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>Yes — about a third of our first-year work has been for clients in the UAE, the UK and Australia. We overlap at least four hours with every client time zone and bill in USD, GBP, AED or BDT.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>Who owns the intellectual property?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>You do. Code, designs and documentation transfer to you as they are produced, not at final payment. We ask only for the right to describe the work in a case study, and only with your written approval.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>Can you take over an existing project?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>Often. We begin with a short technical and design audit that tells you honestly whether the work should be continued or restarted. Two of our current clients came to us that way.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>What happens after launch?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>Every project includes 90 days of support covering defects and monitoring. After that most clients move to a monthly retainer, and some take the system fully in-house — which we plan for from the start.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>How large are your teams?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>We are four people, so your project gets three or four of us — always a designer and an engineering lead. We run two engagements at a time, which is the real reason we can answer your message the same day.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button"><span>Do you sign NDAs?</span><span class="pm"></span></button>
+    <div class="acc-panel"><div class="inner"><p>Yes, as a matter of course, and we will work under yours rather than insisting on ours. Where a client prefers not to be named, the case study runs anonymised or not at all.</p></div></div></div></div>
+</div></section>
+  </main>
+
+<footer class="ftr">
+    <div class="shell">
+      <div class="ftr-top">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:18px">
+            <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"></path></svg>
+            <span class="brand-name">Infinite Designs<small>Est. 2025</small></span>
+          </a>
+          <p style="color:var(--txt-dim);font-size:.92rem;max-width:34ch;line-height:1.65">A four-person digital product studio in Dhaka. Founded 2025. Forty-plus projects delivered for eighteen clients.</p>
+          <div class="soc">
+            <a href="/contact" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.1h4.2V24H.4zM8.3 8.1h4v2.2h.06c.56-1.06 1.93-2.2 3.97-2.2 4.25 0 5.03 2.8 5.03 6.43V24h-4.2v-7.6c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8.3z"></path></svg></a>
+            <a href="/contact" aria-label="Dribbble"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm7.94 5.54a10.2 10.2 0 0 1 2.3 6.38c-.34-.07-3.73-.76-7.14-.33-.08-.18-.15-.36-.23-.55-.21-.5-.44-1-.68-1.48 3.78-1.54 5.5-3.76 5.75-4.02zM12 1.78c2.55 0 4.88.96 6.65 2.53-.21.3-1.76 2.38-5.4 3.75A52.6 52.6 0 0 0 9.4 2.13 10.3 10.3 0 0 1 12 1.78zM7.43 2.83a61 61 0 0 1 3.83 5.87C6.44 9.98 2.2 9.96 1.74 9.96A10.27 10.27 0 0 1 7.43 2.83zM1.76 12.02v-.31c.45.01 5.43.08 10.54-1.46.3.57.57 1.15.83 1.73l-.4.12c-5.28 1.7-8.08 6.36-8.32 6.75a10.2 10.2 0 0 1-2.65-6.83zM12 22.25c-2.36 0-4.53-.8-6.26-2.15.18-.38 2.28-4.4 8.05-6.42l.07-.02a42.6 42.6 0 0 1 2.2 7.8A10.2 10.2 0 0 1 12 22.25zm5.8-1.74a44.6 44.6 0 0 0-2-7.65c3.2-.51 6.02.33 6.37.44a10.25 10.25 0 0 1-4.37 7.21z"></path></svg></a>
+            <a href="/contact" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.8 18 5.1 18 5.1c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+            <a href="/contact" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.3l-5.8-7.5-6.6 7.5H.6l8.6-9.8L.2 1.2h7.5l5.2 6.9zm-1.3 19.4h2L6.5 3.2H4.4z"></path></svg></a>
+          </div>
+        </div>
+        <div><h5>Services</h5><div class="ftr-col" id="ftrServices"><a href="/services/web-development">Web Development</a><a href="/services/ui-ux-design">UI/UX Design</a><a href="/services/software-development">Software Development</a><a href="/services/ai-solutions">Artificial Intelligence</a><a href="/services/digital-marketing-seo">Digital Marketing &amp; SEO</a><a href="/services/mobile-app-development">Mobile App Development</a><a href="/services/ecommerce-corporate">E-commerce &amp; Corporate Solutions</a><a href="/services/lms-solutions">LMS Solutions</a></div></div>
+        <div><h5>Company</h5><div class="ftr-col">
+          <a href="/about">About us</a><a href="/work">Case studies</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/services">All services</a>
+        </div></div>
+        <div><h5>Studio</h5><div class="ftr-col">
+          <a href="/contact">House 42, Road 11<br>Gulshan 1, Dhaka 1212</a>
+          <a href="/contact">+880 9613 800 400</a>
+          <a href="/contact">hello@infinitedesigns.com.bd</a>
+          <a href="/careers">careers@infinitedesigns.com.bd</a>
+        </div>
+        <p class="disclosure" style="margin-top:18px">Portfolio, client names and testimonials on this site are sample content created to demonstrate the layout. Replace them with your own before going live.</p>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <span>© 2026 Infinite Designs Ltd. All rights reserved.</span>
+        <div class="links"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a><a href="/contact">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

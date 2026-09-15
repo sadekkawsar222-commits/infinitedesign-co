@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veloce Retail — Infinite Designs</title>
+<meta name="description" content="Offline-first point of sale, central inventory and a loyalty programme rolled out across a national supermarket chain.">
+<meta name="theme-color" content="#07060D">
+<link rel="canonical" href="https://infinitedesigns.com.bd/work/veloce-retail">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infinite Designs">
+<meta property="og:title" content="Veloce Retail — Infinite Designs">
+<meta property="og:description" content="Offline-first point of sale, central inventory and a loyalty programme rolled out across a national supermarket chain.">
+<meta property="og:url" content="https://infinitedesigns.com.bd/work/veloce-retail">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="lw">
+    <svg viewBox="0 0 120 60" aria-hidden="true">
+      <defs><linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs>
+      <path class="draw" d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#lgrad)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="pc" id="loadpc">00</div>
+  </div>
+</div>
+
+<canvas id="delta" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a href="/" class="brand" aria-label="Infinite Designs home">
+      <svg viewBox="0 0 120 60" aria-hidden="true"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"/></svg>
+      <span class="brand-name">Infinite Designs<small>Dhaka &middot; Bangladesh</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="/work" class="on">Work</a><a href="/services">Services</a><a href="/about">About</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a></nav>
+    <div class="hdr-cta">
+      <a href="/contact" class="btn btn-pri btn-sm" data-cursor>Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <nav id="drawerNav" aria-label="Mobile"><a href="/work" class="on"><span>Work</span><span class="idx">01</span></a><a href="/services"><span>Services</span><span class="idx">02</span></a><a href="/about"><span>About</span><span class="idx">03</span></a><a href="/insights"><span>Insights</span><span class="idx">04</span></a><a href="/careers"><span>Careers</span><span class="idx">05</span></a><a href="/contact"><span>Contact</span><span class="idx">06</span></a></nav>
+  <div class="drawer-foot">
+    <span>hello@infinitedesigns.com.bd</span><span>+880 9613 800 400</span><span>Gulshan 1, Dhaka 1212</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <main id="app">
+
+<section class="cs-hero">
+  <div class="shell">
+    <div class="breadcrumb"><a href="/work">Case studies</a> <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg> <span>Retail</span></div>
+    <div style="margin-bottom:24px"><svg viewBox="0 0 150 28" style="height:34px" role="img" aria-label="Veloce Retail logo">
+    <g><g fill="#FF4D3D"><path d="M3 7l6.5 7L3 21h5.6l6.5-7-6.5-7z" opacity=".45"></path><path d="M12.4 7l6.5 7-6.5 7H18l6.5-7L18 7z"></path></g></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Veloce Retail</text>
+  </svg></div>
+    <h1 style="max-width:16ch">118 outlets, one stock figure, zero sales lost to a dropped connection</h1>
+    <p class="lede" style="margin-top:24px">Offline-first point of sale, central inventory and a loyalty programme rolled out across a national supermarket chain.</p>
+  </div>
+</section>
+
+<section><div class="shell"><div class="cs-art" data-par="0.04"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Veloce Retail project visual"><defs>
+    <linearGradient id="g185" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(91,33,38)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g186" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#FF4D3D" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(255,139,129)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c187"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g185)"></rect><g clip-path="url(#c187)"><circle cx="268" cy="90" r="190" fill="#FF4D3D" opacity=".16"></circle>
+      <path d="M0 400 C 160 300 220 360 340 280 C 460 200 520 250 640 170 L640 400Z" fill="#FF4D3D" opacity=".1"></path>
+      <rect x="44" y="44" width="552" height="312" rx="16" fill="#0D0C18" stroke="#ffffff1f"></rect>
+      <rect x="44" y="44" width="552" height="46" rx="16" fill="rgb(122,42,42)"></rect><rect x="44" y="74" width="552" height="16" fill="rgb(122,42,42)"></rect>
+      <rect x="66" y="60" width="74" height="13" rx="6.5" fill="#FF4D3D"></rect>
+      <rect x="210" y="63" width="34" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="272" y="63" width="38" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="334" y="63" width="42" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="396" y="63" width="46" height="7" rx="3.5" fill="#ffffff2e"></rect>
+      <circle cx="560" cy="67" r="9" fill="none" stroke="#ffffff44" stroke-width="2"></circle>
+      <g transform="translate(68 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(250 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(171,55,49)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(432 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(68 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(171,55,49)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(250 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(432 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(171,55,49)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#FF4D3D"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g></g></svg></div></div></section>
+
+<section class="sec" style="padding-block:clamp(34px,4vw,56px)"><div class="shell">
+  <div class="cs-meta">
+    <div><i>Client</i><b>Veloce Retail</b></div>
+    <div><i>Sector</i><b>Retail</b></div>
+    <div><i>Engagement</i><b>12 weeks + rollout · 2025</b></div>
+    <div><i>Team</i><b>All four of us</b></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell cs-split">
+  <div class="cs-sticky">
+    <span class="mini-head">Services applied</span>
+    <div class="stack" style="gap:8px">
+      <a href="/services/retail-solutions" class="link-i" style="font-size:.88rem;border:0;padding:0">Retail Business Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/mobile-app-development" class="link-i" style="font-size:.88rem;border:0;padding:0">Mobile App Development <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/data-analytics-ai" class="link-i" style="font-size:.88rem;border:0;padding:0">Data Analytics &amp; AI-Driven Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/erp-automation" class="link-i" style="font-size:.88rem;border:0;padding:0">ERP &amp; Business Automation <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <div style="margin-top:26px"><span class="mini-head">Technology</span><div class="tagset"><span>Flutter</span><span>Laravel</span><span>PostgreSQL</span><span>SQLite</span><span>Redis</span><span>Metabase</span><span>ESC/POS</span></div></div>
+    <div style="margin-top:26px"><span class="mini-head">Location</span><p style="font-size:.9rem;color:var(--txt-dim)">118 outlets nationwide</p></div>
+  </div>
+  <div class="d1">
+    <span class="eyebrow">The challenge</span>
+    <div class="prose" style="max-width:none;margin-top:16px"><p>Veloce ran 118 outlets on a POS that required a live connection. A network drop in an outlet meant queues formed and sales were written on paper, then keyed in later — sometimes wrongly, sometimes not at all.</p><p>Stock figures were reconciled weekly, which meant the online store routinely sold items that were not on any shelf. Promotions were configured outlet by outlet, so a national campaign took four days to apply and never applied consistently.</p></div>
+    <h3 style="margin-top:48px">How we approached it</h3>
+    <div class="steps" style="margin-top:20px">
+      <div class="step"><span class="n">01</span><div><h3 style="font-size:1.15rem">Pilot in the hardest outlets</h3></div><div class="sd"><p>We started in the five outlets with the worst connectivity rather than the easiest, so the offline model was proven against the real failure case.</p></div></div><div class="step"><span class="n">02</span><div><h3 style="font-size:1.15rem">Offline-first transaction ledger</h3></div><div class="sd"><p>Every sale writes locally first and syncs opportunistically, with server-authoritative reconciliation for price and stock changes made centrally.</p></div></div><div class="step"><span class="n">03</span><div><h3 style="font-size:1.15rem">Central pricing and promotions</h3></div><div class="sd"><p>One promotion engine pushing to every terminal, with scheduled activation and an audit of what each outlet actually applied.</p></div></div><div class="step"><span class="n">04</span><div><h3 style="font-size:1.15rem">Rollout at two outlets a day</h3></div><div class="sd"><p>A staged national rollout with a trained champion in each region and a 48-hour support window per outlet.</p></div></div>
+    </div>
+    <h3 style="margin-top:48px">What we built</h3>
+    <ul class="list-check" style="margin-top:18px"><li>Offline-first POS on Android terminals with local ledger and sync</li><li>Central promotion engine with scheduled national activation</li><li>Real-time stock visibility shared with the online storefront</li><li>Loyalty programme with tiering, points and targeted offers</li><li>Shrinkage and category performance dashboards per outlet</li><li>Cashier training programme delivered in eight regional sessions</li></ul>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Results</span>
+    <div class="row">
+      <h2 style="max-width:18ch">Measured against the baseline we agreed at kickoff.</h2>
+      
+    </div>
+    
+  </div>
+  <div class="results"><div class="result"><b>0</b><span>sales lost to connectivity post-rollout</span></div><div class="result"><b>+26%</b><span>repeat purchase rate after loyalty launch</span></div><div class="result"><b>4 days → 20 min</b><span>national promotion rollout time</span></div></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  <div class="two-col" style="align-items:center">
+    <div class="panel" style="padding:clamp(28px,4vw,48px)">
+      <blockquote style="margin:0;font-family:var(--font-display);font-size:clamp(1.2rem,2.2vw,1.75rem);line-height:1.32;letter-spacing:-.03em;color:var(--txt)">“We asked three vendors to start with our flagship store. Infinite Designs asked for our worst five. That told us everything about how they work.”</blockquote>
+      <div class="who" style="display:flex;align-items:center;gap:14px;margin-top:28px">
+        <span style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid var(--line-2);flex:none;display:block"><svg viewBox="0 0 240 268" role="img" aria-label="Illustrated portrait">
+    <defs><linearGradient id="a188" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgb(122,85,41)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="a189" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFAE3B" stop-opacity=".9"></stop><stop offset="100%" stop-color="rgb(153,104,35)"></stop></linearGradient></defs>
+    <rect width="240" height="268" fill="url(#a188)"></rect>
+    <circle cx="120" cy="120" r="74" fill="#FFAE3B" opacity=".13"></circle>
+    <path d="M40 268c0-42 36-62 80-62s80 20 80 62z" fill="url(#a189)"></path>
+    <path d="M96 176h48v26H96z" fill="#D6A178"></path>
+    <path d="M74 118c0-30 20-52 46-52s46 22 46 52c0 34-12 52-46 52s-46-18-46-52z" fill="rgb(191,131,44)"></path><path d="M78 150c-8 26-4 48 6 60h72c10-12 14-34 6-60z" fill="rgb(166,113,38)"></path>
+    <ellipse cx="120" cy="120" rx="36" ry="44" fill="#D6A178"></ellipse>
+    
+    <ellipse cx="104" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse><ellipse cx="136" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse>
+    <path d="M110 136q10 8 20 0" fill="none" stroke="#120F1A" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M120 122v9" fill="none" stroke="rgb(139,105,78)" stroke-width="2.4" stroke-linecap="round"></path>
+    <path d="M84 124c0 32 16 50 36 50s36-18 36-50c-6 22-18 32-36 32s-30-10-36-32z" fill="#2A1C18" opacity=".92"></path>
+    
+    <path d="M96 206 v62" stroke="rgb(204,142,98)" stroke-width="2" opacity=".4"></path>
+  </svg></span>
+        <span><b style="display:block;font-size:.96rem">Nazmul Islam</b><span style="display:block;font-size:.83rem;color:var(--txt-faint)">Chief Operating Officer, Veloce Retail</span></span>
+      </div>
+    </div>
+    <div class="cs-art d1"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Veloce Retail project visual"><defs>
+    <linearGradient id="g190" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(91,33,38)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g191" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#FF4D3D" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(255,139,129)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c192"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g190)"></rect><g clip-path="url(#c192)"><circle cx="193" cy="90" r="190" fill="#FF4D3D" opacity=".16"></circle>
+      <g opacity=".6"><circle cx="320" cy="200" r="58" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="98" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="138" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="178" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="218" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="258" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="298" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle></g>
+      <g transform="translate(236 34)">
+        <rect width="168" height="332" rx="28" fill="#0C0B16" stroke="#ffffff26" stroke-width="1.5"></rect>
+        <rect x="8" y="8" width="152" height="316" rx="22" fill="rgb(64,24,27)"></rect>
+        <rect x="62" y="16" width="44" height="7" rx="3.5" fill="#ffffff2a"></rect>
+        <rect x="24" y="44" width="70" height="9" rx="4.5" fill="#ffffff33"></rect>
+        <rect x="24" y="64" width="120" height="58" rx="12" fill="url(#g191)"></rect>
+        <rect x="38" y="80" width="42" height="6" rx="3" fill="#00000055"></rect><rect x="38" y="94" width="66" height="12" rx="4" fill="#00000077"></rect>
+        <g transform="translate(24 136)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#FF4D3D"></circle><rect x="33" y="9" width="44" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 176)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="56" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 216)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="68" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 256)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="80" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g>
+        <rect x="24" y="300" width="120" height="14" rx="7" fill="#FF4D3D" opacity=".9"></rect>
+      </g>
+      <g transform="translate(60 96)" opacity=".92"><rect width="150" height="94" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><rect x="16" y="18" width="52" height="6" rx="3" fill="#ffffff2e"></rect><path d="M16 74 L44 56 L68 64 L94 40 L118 50 L134 34" fill="none" stroke="#FF4D3D" stroke-width="2.6" stroke-linecap="round"></path></g>
+      <g transform="translate(430 190)" opacity=".92"><rect width="150" height="110" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><circle cx="40" cy="55" r="26" fill="none" stroke="#ffffff1a" stroke-width="8"></circle><circle cx="40" cy="55" r="26" fill="none" stroke="rgb(255,139,129)" stroke-width="8" stroke-dasharray="147 164" stroke-linecap="round" transform="rotate(-90 40 55)"></circle><rect x="80" y="38" width="52" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="80" y="55" width="36" height="14" rx="4" fill="#FF4D3D"></rect></g></g></svg></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Next case study</span>
+    <div class="row">
+      <h2 style="max-width:18ch">A payment orchestration layer that survives when a provider does not</h2>
+      <div><a href="/work" class="btn btn-ghost" data-cursor="">All case studies<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+    
+  </div>
+  <div class="work-grid" style="grid-template-columns:1fr">
+  <a href="/work/lumenpay" class="work-card d1" data-sector="Fintech / SaaS" data-cursor-big="">
+    <div class="work-thumb"><span class="tag">Fintech / SaaS · 2026</span><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Lumenpay project visual"><defs>
+    <linearGradient id="g193" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(49,38,100)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g194" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#7B5CFF" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(169,149,255)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c195"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g193)"></rect><g clip-path="url(#c195)"><circle cx="194" cy="90" r="190" fill="#7B5CFF" opacity=".16"></circle><g opacity=".45"><line x1="176" y1="242" x2="313" y2="159" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="176" y1="242" x2="87" y2="273" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="176" y1="242" x2="224" y2="190" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="176" y1="242" x2="135" y2="221" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="176" y1="242" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="176" y1="242" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="450" y2="76" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="224" y2="190" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="361" y2="107" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="135" y2="221" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="313" y1="159" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="450" y1="76" x2="361" y2="107" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="450" y1="76" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="450" y1="76" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="87" y1="273" x2="224" y2="190" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="87" y1="273" x2="135" y2="221" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="87" y1="273" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="224" y1="190" x2="361" y2="107" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="224" y1="190" x2="135" y2="221" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="224" y1="190" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="224" y1="190" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="224" y1="190" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="361" y1="107" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="361" y1="107" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="361" y1="107" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="498" y1="304" x2="409" y2="335" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="498" y1="304" x2="546" y2="252" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="498" y1="304" x2="457" y2="283" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="135" y1="221" x2="272" y2="138" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="135" y1="221" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="272" y1="138" x2="183" y2="169" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="272" y1="138" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="409" y1="335" x2="546" y2="252" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="409" y1="335" x2="457" y2="283" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="546" y1="252" x2="457" y2="283" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line><line x1="183" y1="169" x2="320" y2="86" stroke="#7B5CFF" stroke-opacity=".38" stroke-width="1"></line></g>
+      <circle cx="176" cy="242" r="7" fill="#7B5CFF"></circle><circle cx="313" cy="159" r="4" fill="#ffffff40"></circle><circle cx="450" cy="76" r="4" fill="#ffffff40"></circle><circle cx="87" cy="273" r="4" fill="#ffffff40"></circle><circle cx="224" cy="190" r="7" fill="#7B5CFF"></circle><circle cx="361" cy="107" r="4" fill="#ffffff40"></circle><circle cx="498" cy="304" r="4" fill="#ffffff40"></circle><circle cx="135" cy="221" r="4" fill="#ffffff40"></circle><circle cx="272" cy="138" r="7" fill="#7B5CFF"></circle><circle cx="409" cy="335" r="4" fill="#ffffff40"></circle><circle cx="546" cy="252" r="4" fill="#ffffff40"></circle><circle cx="183" cy="169" r="4" fill="#ffffff40"></circle><circle cx="320" cy="86" r="7" fill="#7B5CFF"></circle><circle cx="457" cy="283" r="4" fill="#ffffff40"></circle>
+      <g transform="translate(200 140)"><rect width="240" height="120" rx="14" fill="#0C0B16" stroke="#ffffff26"></rect>
+        <circle cx="46" cy="60" r="22" fill="none" stroke="#7B5CFF" stroke-width="2.4"></circle><circle cx="46" cy="60" r="8" fill="#7B5CFF"></circle>
+        <rect x="84" y="40" width="120" height="8" rx="4" fill="#ffffff33"></rect><rect x="84" y="58" width="90" height="7" rx="3.5" fill="#ffffff1f"></rect><rect x="84" y="76" width="64" height="12" rx="4" fill="rgb(169,149,255)" opacity=".8"></rect></g></g></svg></div>
+    <div class="work-body">
+      <div class="cl"><svg viewBox="0 0 140 28" style="height:20px" role="img" aria-label="Lumenpay logo">
+    <g><path d="M14 2.6l10 5.8v11.2L14 25.4 4 19.6V8.4z" fill="none" stroke="#7B5CFF" stroke-width="2.2" stroke-linejoin="round"></path><path d="M14 8v6.6h5.4" fill="none" stroke="#7B5CFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="14" cy="14" r="1.7" fill="#7B5CFF"></circle></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Lumenpay</text>
+  </svg></div>
+      <h3>A payment orchestration layer that survives when a provider does not</h3>
+      <p>A multi-tenant orchestration platform routing card, wallet and mobile financial service payments across eleven providers with automatic failover.</p>
+      <div class="work-kpis"><span class="kpi"><b>99.99%</b>checkout availability across provider</span><span class="kpi"><b>2.5 days → 20 min</b>monthly reconciliation effort</span><span class="kpi"><b>+9.2pp</b>median authorisation rate improvement</span></div>
+    </div>
+  </a></div>
+</div></section>
+
+  <section class="sec"><div class="shell">
+    <div class="cta-band" data-par="-0.05">
+      <span class="eyebrow solo" style="justify-content:center">Start a conversation</span>
+      <h2 style="margin-top:16px">Let’s work out whether we’re the right studio for this.</h2>
+      <p class="lede">Tell us what you’re trying to build. You’ll get a senior person on the first call — not a salesperson — and an honest answer about scope, budget and timeline within two working days.</p>
+      <div class="acts"><a href="/contact" class="btn btn-pri" data-cursor="">Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a><a href="/work" class="btn btn-ghost" data-cursor="">See how we work<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+  </div></section>
+  </main>
+
+<footer class="ftr">
+    <div class="shell">
+      <div class="ftr-top">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:18px">
+            <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"></path></svg>
+            <span class="brand-name">Infinite Designs<small>Est. 2025</small></span>
+          </a>
+          <p style="color:var(--txt-dim);font-size:.92rem;max-width:34ch;line-height:1.65">A four-person digital product studio in Dhaka. Founded 2025. Forty-plus projects delivered for eighteen clients.</p>
+          <div class="soc">
+            <a href="/contact" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.1h4.2V24H.4zM8.3 8.1h4v2.2h.06c.56-1.06 1.93-2.2 3.97-2.2 4.25 0 5.03 2.8 5.03 6.43V24h-4.2v-7.6c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8.3z"></path></svg></a>
+            <a href="/contact" aria-label="Dribbble"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm7.94 5.54a10.2 10.2 0 0 1 2.3 6.38c-.34-.07-3.73-.76-7.14-.33-.08-.18-.15-.36-.23-.55-.21-.5-.44-1-.68-1.48 3.78-1.54 5.5-3.76 5.75-4.02zM12 1.78c2.55 0 4.88.96 6.65 2.53-.21.3-1.76 2.38-5.4 3.75A52.6 52.6 0 0 0 9.4 2.13 10.3 10.3 0 0 1 12 1.78zM7.43 2.83a61 61 0 0 1 3.83 5.87C6.44 9.98 2.2 9.96 1.74 9.96A10.27 10.27 0 0 1 7.43 2.83zM1.76 12.02v-.31c.45.01 5.43.08 10.54-1.46.3.57.57 1.15.83 1.73l-.4.12c-5.28 1.7-8.08 6.36-8.32 6.75a10.2 10.2 0 0 1-2.65-6.83zM12 22.25c-2.36 0-4.53-.8-6.26-2.15.18-.38 2.28-4.4 8.05-6.42l.07-.02a42.6 42.6 0 0 1 2.2 7.8A10.2 10.2 0 0 1 12 22.25zm5.8-1.74a44.6 44.6 0 0 0-2-7.65c3.2-.51 6.02.33 6.37.44a10.25 10.25 0 0 1-4.37 7.21z"></path></svg></a>
+            <a href="/contact" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.8 18 5.1 18 5.1c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+            <a href="/contact" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.3l-5.8-7.5-6.6 7.5H.6l8.6-9.8L.2 1.2h7.5l5.2 6.9zm-1.3 19.4h2L6.5 3.2H4.4z"></path></svg></a>
+          </div>
+        </div>
+        <div><h5>Services</h5><div class="ftr-col" id="ftrServices"><a href="/services/web-development">Web Development</a><a href="/services/ui-ux-design">UI/UX Design</a><a href="/services/software-development">Software Development</a><a href="/services/ai-solutions">Artificial Intelligence</a><a href="/services/digital-marketing-seo">Digital Marketing &amp; SEO</a><a href="/services/mobile-app-development">Mobile App Development</a><a href="/services/ecommerce-corporate">E-commerce &amp; Corporate Solutions</a><a href="/services/lms-solutions">LMS Solutions</a></div></div>
+        <div><h5>Company</h5><div class="ftr-col">
+          <a href="/about">About us</a><a href="/work">Case studies</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/services">All services</a>
+        </div></div>
+        <div><h5>Studio</h5><div class="ftr-col">
+          <a href="/contact">House 42, Road 11<br>Gulshan 1, Dhaka 1212</a>
+          <a href="/contact">+880 9613 800 400</a>
+          <a href="/contact">hello@infinitedesigns.com.bd</a>
+          <a href="/careers">careers@infinitedesigns.com.bd</a>
+        </div>
+        <p class="disclosure" style="margin-top:18px">Portfolio, client names and testimonials on this site are sample content created to demonstrate the layout. Replace them with your own before going live.</p>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <span>© 2026 Infinite Designs Ltd. All rights reserved.</span>
+        <div class="links"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a><a href="/contact">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

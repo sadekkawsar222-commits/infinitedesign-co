@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cirrus Energy — Infinite Designs</title>
+<meta name="description" content="An IoT telemetry and analytics platform monitoring rooftop solar installations, predicting faults before customers notice a shortfall.">
+<meta name="theme-color" content="#07060D">
+<link rel="canonical" href="https://infinitedesigns.com.bd/work/cirrus-energy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infinite Designs">
+<meta property="og:title" content="Cirrus Energy — Infinite Designs">
+<meta property="og:description" content="An IoT telemetry and analytics platform monitoring rooftop solar installations, predicting faults before customers notice a shortfall.">
+<meta property="og:url" content="https://infinitedesigns.com.bd/work/cirrus-energy">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="lw">
+    <svg viewBox="0 0 120 60" aria-hidden="true">
+      <defs><linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs>
+      <path class="draw" d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#lgrad)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="pc" id="loadpc">00</div>
+  </div>
+</div>
+
+<canvas id="delta" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a href="/" class="brand" aria-label="Infinite Designs home">
+      <svg viewBox="0 0 120 60" aria-hidden="true"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"/></svg>
+      <span class="brand-name">Infinite Designs<small>Dhaka &middot; Bangladesh</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="/work" class="on">Work</a><a href="/services">Services</a><a href="/about">About</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a></nav>
+    <div class="hdr-cta">
+      <a href="/contact" class="btn btn-pri btn-sm" data-cursor>Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <nav id="drawerNav" aria-label="Mobile"><a href="/work" class="on"><span>Work</span><span class="idx">01</span></a><a href="/services"><span>Services</span><span class="idx">02</span></a><a href="/about"><span>About</span><span class="idx">03</span></a><a href="/insights"><span>Insights</span><span class="idx">04</span></a><a href="/careers"><span>Careers</span><span class="idx">05</span></a><a href="/contact"><span>Contact</span><span class="idx">06</span></a></nav>
+  <div class="drawer-foot">
+    <span>hello@infinitedesigns.com.bd</span><span>+880 9613 800 400</span><span>Gulshan 1, Dhaka 1212</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <main id="app">
+
+<section class="cs-hero">
+  <div class="shell">
+    <div class="breadcrumb"><a href="/work">Case studies</a> <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg> <span>Energy &amp; Utilities</span></div>
+    <div style="margin-bottom:24px"><svg viewBox="0 0 162 28" style="height:34px" role="img" aria-label="Cirrus Energy logo">
+    <g><circle cx="14" cy="14" r="4" fill="#F2C230"></circle><g stroke="#F2C230" stroke-width="2.4" stroke-linecap="round"><path d="M14 2.4v4.2M14 21.4v4.2M2.4 14h4.2M21.4 14h4.2"></path><path d="M5.8 5.8l3 3M19.2 19.2l3 3M22.2 5.8l-3 3M8.8 19.2l-3 3" opacity=".5"></path></g></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Cirrus Energy</text>
+  </svg></div>
+    <h1 style="max-width:16ch">Fourteen thousand rooftop systems, watched from one screen</h1>
+    <p class="lede" style="margin-top:24px">An IoT telemetry and analytics platform monitoring rooftop solar installations, predicting faults before customers notice a shortfall.</p>
+  </div>
+</section>
+
+<section><div class="shell"><div class="cs-art" data-par="0.04"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cirrus Energy project visual"><defs>
+    <linearGradient id="g251" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(87,71,34)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g252" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#F2C230" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(247,215,120)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c253"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g251)"></rect><g clip-path="url(#c253)"><circle cx="230" cy="90" r="190" fill="#F2C230" opacity=".16"></circle>
+      <g opacity=".55"><path d="M0 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M52 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M104 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M156 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M208 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M260 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M312 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M364 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M416 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M468 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M520 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M572 0 V400" stroke="#fff" stroke-opacity=".04"></path><path d="M624 0 V400" stroke="#fff" stroke-opacity=".04"></path></g>
+      <path d="M0 330 L0 253 L40 225 L80 210 L120 217 L160 247 L200 293 L240 342 L280 379 L320 395 L360 387 L400 362 L440 331 L480 307 L520 300 L560 313 L600 339 L640 368 L640 400 L0 400Z" fill="#F2C230" opacity=".16"></path>
+      <path d="M0 330 L0 253 L40 225 L80 210 L120 217 L160 247 L200 293 L240 342 L280 379 L320 395 L360 387 L400 362 L440 331 L480 307 L520 300 L560 313 L600 339 L640 368" fill="none" stroke="url(#g252)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="0" cy="253" r="4.5" fill="rgb(247,215,120)"></circle><circle cx="160" cy="247" r="4.5" fill="rgb(247,215,120)"></circle><circle cx="320" cy="395" r="4.5" fill="rgb(247,215,120)"></circle><circle cx="480" cy="307" r="4.5" fill="rgb(247,215,120)"></circle><circle cx="640" cy="368" r="4.5" fill="rgb(247,215,120)"></circle>
+      <g transform="translate(46 44)"><rect width="230" height="118" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect>
+        <rect x="20" y="20" width="76" height="7" rx="3.5" fill="#ffffff2e"></rect>
+        <text x="20" y="66" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="34" font-weight="800" fill="rgb(247,215,120)">14,200</text>
+        <rect x="20" y="84" width="150" height="6" rx="3" fill="#ffffff14"></rect><rect x="20" y="84" width="132" height="6" rx="3" fill="#F2C230"></rect></g>
+      <g transform="translate(394 214)"><rect width="200" height="140" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect>
+        <g transform="translate(20 22)"><rect width="60" height="10" rx="5" fill="#ffffff1a"></rect></g><g transform="translate(20 45)"><rect width="62" height="10" rx="5" fill="#F2C230"></rect></g><g transform="translate(20 68)"><rect width="64" height="10" rx="5" fill="#ffffff1a"></rect></g><g transform="translate(20 91)"><rect width="66" height="10" rx="5" fill="#ffffff1a"></rect></g><g transform="translate(20 114)"><rect width="68" height="10" rx="5" fill="#ffffff1a"></rect></g></g></g></svg></div></div></section>
+
+<section class="sec" style="padding-block:clamp(34px,4vw,56px)"><div class="shell">
+  <div class="cs-meta">
+    <div><i>Client</i><b>Cirrus Energy</b></div>
+    <div><i>Sector</i><b>Energy &amp; Utilities</b></div>
+    <div><i>Engagement</i><b>16 weeks · 2026</b></div>
+    <div><i>Team</i><b>Three of us</b></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell cs-split">
+  <div class="cs-sticky">
+    <span class="mini-head">Services applied</span>
+    <div class="stack" style="gap:8px">
+      <a href="/services/data-analytics-ai" class="link-i" style="font-size:.88rem;border:0;padding:0">Data Analytics &amp; AI-Driven Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/ai-solutions" class="link-i" style="font-size:.88rem;border:0;padding:0">Artificial Intelligence (AI) Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/software-development" class="link-i" style="font-size:.88rem;border:0;padding:0">Software Development <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/cybersecurity-infrastructure" class="link-i" style="font-size:.88rem;border:0;padding:0">Cybersecurity &amp; IT Infrastructure <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <div style="margin-top:26px"><span class="mini-head">Technology</span><div class="tagset"><span>Python</span><span>TimescaleDB</span><span>MQTT</span><span>Kafka</span><span>FastAPI</span><span>React</span><span>Grafana</span><span>AWS IoT</span></div></div>
+    <div style="margin-top:26px"><span class="mini-head">Location</span><p style="font-size:.9rem;color:var(--txt-dim)">Dhaka &amp; Khulna</p></div>
+  </div>
+  <div class="d1">
+    <span class="eyebrow">The challenge</span>
+    <div class="prose" style="max-width:none;margin-top:16px"><p>Cirrus installed rooftop solar across industrial and residential sites but learned about underperformance only when a customer complained — typically two to three months after output had quietly dropped.</p><p>Engineers were dispatched on guesswork. Around 40% of site visits found nothing wrong, while genuinely failing inverters ran degraded for weeks.</p></div>
+    <h3 style="margin-top:48px">How we approached it</h3>
+    <div class="steps" style="margin-top:20px">
+      <div class="step"><span class="n">01</span><div><h3 style="font-size:1.15rem">Telemetry that survives the network</h3></div><div class="sd"><p>A store-and-forward gateway holding fourteen days of readings locally, so rural sites with intermittent connectivity lose nothing.</p></div></div><div class="step"><span class="n">02</span><div><h3 style="font-size:1.15rem">A baseline per installation</h3></div><div class="sd"><p>Expected output modelled per site from orientation, tilt, shading and local irradiance, so deviation means something specific rather than generic.</p></div></div><div class="step"><span class="n">03</span><div><h3 style="font-size:1.15rem">Fault classification</h3></div><div class="sd"><p>Models distinguishing soiling, shading, string failure and inverter degradation, each mapped to a different engineer action.</p></div></div><div class="step"><span class="n">04</span><div><h3 style="font-size:1.15rem">Dispatch by confidence</h3></div><div class="sd"><p>Work orders raised automatically with a predicted fault and confidence score, so engineers arrive knowing what to bring.</p></div></div>
+    </div>
+    <h3 style="margin-top:48px">What we built</h3>
+    <ul class="list-check" style="margin-top:18px"><li>Store-and-forward gateways tolerating 14 days offline</li><li>Per-installation output baselines from orientation, tilt and shading</li><li>Fault classification separating soiling, shading and inverter failure</li><li>Automated work orders with predicted fault and confidence score</li><li>Customer portal showing generation, savings and carbon offset</li><li>Fleet dashboards with performance ranking by district and installer</li></ul>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Results</span>
+    <div class="row">
+      <h2 style="max-width:18ch">Measured against the baseline we agreed at kickoff.</h2>
+      
+    </div>
+    
+  </div>
+  <div class="results"><div class="result"><b>14,200</b><span>installations monitored live</span></div><div class="result"><b>−67%</b><span>no-fault-found site visits</span></div><div class="result"><b>11 days</b><span>median early warning before customer notices</span></div></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  <div class="two-col" style="align-items:center">
+    <div class="panel" style="padding:clamp(28px,4vw,48px)">
+      <blockquote style="margin:0;font-family:var(--font-display);font-size:clamp(1.2rem,2.2vw,1.75rem);line-height:1.32;letter-spacing:-.03em;color:var(--txt)">“We used to find out from an angry phone call. Now we find out eleven days earlier, from the system, and we fix it before anyone calls.”</blockquote>
+      <div class="who" style="display:flex;align-items:center;gap:14px;margin-top:28px">
+        <span style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid var(--line-2);flex:none;display:block"><svg viewBox="0 0 240 268" role="img" aria-label="Illustrated portrait">
+    <defs><linearGradient id="a254" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgb(122,55,77)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="a255" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF6B8B" stop-opacity=".9"></stop><stop offset="100%" stop-color="rgb(153,64,83)"></stop></linearGradient></defs>
+    <rect width="240" height="268" fill="url(#a254)"></rect>
+    <circle cx="120" cy="120" r="74" fill="#FF6B8B" opacity=".13"></circle>
+    <path d="M40 268c0-42 36-62 80-62s80 20 80 62z" fill="url(#a255)"></path>
+    <path d="M96 176h48v26H96z" fill="#A96B45"></path>
+    
+    <ellipse cx="120" cy="120" rx="42" ry="50" fill="#A96B45"></ellipse>
+    <path d="M78 112c0-28 18-46 42-46s42 18 42 46c0 4-2 8-2 8-4-16-12-24-24-26-14-2-24 4-32 12-6 6-10 14-12 22 0 0-14-8-14-16z" fill="#241A1F"></path>
+    <ellipse cx="104" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse><ellipse cx="136" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse>
+    <path d="M110 136q10 8 20 0" fill="none" stroke="#120F1A" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M120 122v9" fill="none" stroke="rgb(110,70,45)" stroke-width="2.4" stroke-linecap="round"></path>
+    <path d="M84 124c0 32 16 50 36 50s36-18 36-50c-6 22-18 32-36 32s-30-10-36-32z" fill="#241A1F" opacity=".92"></path>
+    <g fill="none" stroke="#EDEBF7" stroke-opacity=".8" stroke-width="2.4"><circle cx="104" cy="118" r="13"></circle><circle cx="136" cy="118" r="13"></circle><path d="M117 118h6M78 114l13 2M162 114l-13 2"></path></g>
+    <path d="M96 206 v62" stroke="rgb(204,89,162)" stroke-width="2" opacity=".4"></path>
+  </svg></span>
+        <span><b style="display:block;font-size:.96rem">Anwar Hossain</b><span style="display:block;font-size:.83rem;color:var(--txt-faint)">Chief Technology Officer, Cirrus Energy</span></span>
+      </div>
+    </div>
+    <div class="cs-art d1"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cirrus Energy project visual"><defs>
+    <linearGradient id="g256" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(87,71,34)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g257" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#F2C230" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(247,215,120)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c258"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g256)"></rect><g clip-path="url(#c258)"><circle cx="155" cy="90" r="190" fill="#F2C230" opacity=".16"></circle>
+      <g opacity=".6"><circle cx="320" cy="200" r="58" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="98" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="138" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="178" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="218" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="258" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="298" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle></g>
+      <g transform="translate(236 34)">
+        <rect width="168" height="332" rx="28" fill="#0C0B16" stroke="#ffffff26" stroke-width="1.5"></rect>
+        <rect x="8" y="8" width="152" height="316" rx="22" fill="rgb(61,50,25)"></rect>
+        <rect x="62" y="16" width="44" height="7" rx="3.5" fill="#ffffff2a"></rect>
+        <rect x="24" y="44" width="70" height="9" rx="4.5" fill="#ffffff33"></rect>
+        <rect x="24" y="64" width="120" height="58" rx="12" fill="url(#g257)"></rect>
+        <rect x="38" y="80" width="42" height="6" rx="3" fill="#00000055"></rect><rect x="38" y="94" width="66" height="12" rx="4" fill="#00000077"></rect>
+        <g transform="translate(24 136)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#F2C230"></circle><rect x="33" y="9" width="44" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 176)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="56" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 216)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="68" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 256)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="80" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g>
+        <rect x="24" y="300" width="120" height="14" rx="7" fill="#F2C230" opacity=".9"></rect>
+      </g>
+      <g transform="translate(60 96)" opacity=".92"><rect width="150" height="94" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><rect x="16" y="18" width="52" height="6" rx="3" fill="#ffffff2e"></rect><path d="M16 74 L44 56 L68 64 L94 40 L118 50 L134 34" fill="none" stroke="#F2C230" stroke-width="2.6" stroke-linecap="round"></path></g>
+      <g transform="translate(430 190)" opacity=".92"><rect width="150" height="110" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><circle cx="40" cy="55" r="26" fill="none" stroke="#ffffff1a" stroke-width="8"></circle><circle cx="40" cy="55" r="26" fill="none" stroke="rgb(247,215,120)" stroke-width="8" stroke-dasharray="105 164" stroke-linecap="round" transform="rotate(-90 40 55)"></circle><rect x="80" y="38" width="52" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="80" y="55" width="36" height="14" rx="4" fill="#F2C230"></rect></g></g></svg></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Next case study</span>
+    <div class="row">
+      <h2 style="max-width:18ch">Twenty-two restaurants, one membership, and a kitchen that keeps up</h2>
+      <div><a href="/work" class="btn btn-ghost" data-cursor="">All case studies<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+    
+  </div>
+  <div class="work-grid" style="grid-template-columns:1fr">
+  <a href="/work/bayleaf-hospitality" class="work-card d1" data-sector="Hospitality" data-cursor-big="">
+    <div class="work-thumb"><span class="tag">Hospitality · 2026</span><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Bayleaf Hospitality project visual"><defs>
+    <linearGradient id="g259" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(19,53,54)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g260" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#1F8A70" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(109,179,162)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c261"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g259)"></rect><g clip-path="url(#c261)"><circle cx="194" cy="90" r="190" fill="#1F8A70" opacity=".16"></circle>
+      <g opacity=".6"><circle cx="320" cy="200" r="58" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="98" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="138" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="178" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="218" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="258" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="298" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle></g>
+      <g transform="translate(236 34)">
+        <rect width="168" height="332" rx="28" fill="#0C0B16" stroke="#ffffff26" stroke-width="1.5"></rect>
+        <rect x="8" y="8" width="152" height="316" rx="22" fill="rgb(15,37,39)"></rect>
+        <rect x="62" y="16" width="44" height="7" rx="3.5" fill="#ffffff2a"></rect>
+        <rect x="24" y="44" width="70" height="9" rx="4.5" fill="#ffffff33"></rect>
+        <rect x="24" y="64" width="120" height="58" rx="12" fill="url(#g260)"></rect>
+        <rect x="38" y="80" width="42" height="6" rx="3" fill="#00000055"></rect><rect x="38" y="94" width="66" height="12" rx="4" fill="#00000077"></rect>
+        <g transform="translate(24 136)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#1F8A70"></circle><rect x="33" y="9" width="44" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 176)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="56" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 216)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="68" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 256)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="80" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g>
+        <rect x="24" y="300" width="120" height="14" rx="7" fill="#1F8A70" opacity=".9"></rect>
+      </g>
+      <g transform="translate(60 96)" opacity=".92"><rect width="150" height="94" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><rect x="16" y="18" width="52" height="6" rx="3" fill="#ffffff2e"></rect><path d="M16 74 L44 56 L68 64 L94 40 L118 50 L134 34" fill="none" stroke="#1F8A70" stroke-width="2.6" stroke-linecap="round"></path></g>
+      <g transform="translate(430 190)" opacity=".92"><rect width="150" height="110" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><circle cx="40" cy="55" r="26" fill="none" stroke="#ffffff1a" stroke-width="8"></circle><circle cx="40" cy="55" r="26" fill="none" stroke="rgb(109,179,162)" stroke-width="8" stroke-dasharray="116 164" stroke-linecap="round" transform="rotate(-90 40 55)"></circle><rect x="80" y="38" width="52" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="80" y="55" width="36" height="14" rx="4" fill="#1F8A70"></rect></g></g></svg></div>
+    <div class="work-body">
+      <div class="cl"><svg viewBox="0 0 208 28" style="height:20px" role="img" aria-label="Bayleaf Hospitality logo">
+    <g><path d="M23 4.5C12.5 4 5 9 5 16.5c0 3 1.4 5.4 3.4 6.9C9.2 15 14 9.6 21 7.4c-5.6 3.6-9.2 8.6-10.4 16.4 8.6 1 12.4-6.6 12.4-19.3z" fill="#1F8A70"></path></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Bayleaf Hospitality</text>
+  </svg></div>
+      <h3>Twenty-two restaurants, one membership, and a kitchen that keeps up</h3>
+      <p>A guest app, membership programme and kitchen display system connecting 22 outlets across a restaurant and resort group.</p>
+      <div class="work-kpis"><span class="kpi"><b>+43%</b>member visit frequency</span><span class="kpi"><b>−7 min</b>average order-to-table time at</span><span class="kpi"><b>22</b>outlets on one guest</span></div>
+    </div>
+  </a></div>
+</div></section>
+
+  <section class="sec"><div class="shell">
+    <div class="cta-band" data-par="-0.05">
+      <span class="eyebrow solo" style="justify-content:center">Start a conversation</span>
+      <h2 style="margin-top:16px">Let’s work out whether we’re the right studio for this.</h2>
+      <p class="lede">Tell us what you’re trying to build. You’ll get a senior person on the first call — not a salesperson — and an honest answer about scope, budget and timeline within two working days.</p>
+      <div class="acts"><a href="/contact" class="btn btn-pri" data-cursor="">Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a><a href="/work" class="btn btn-ghost" data-cursor="">See how we work<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+  </div></section>
+  </main>
+
+<footer class="ftr">
+    <div class="shell">
+      <div class="ftr-top">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:18px">
+            <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"></path></svg>
+            <span class="brand-name">Infinite Designs<small>Est. 2025</small></span>
+          </a>
+          <p style="color:var(--txt-dim);font-size:.92rem;max-width:34ch;line-height:1.65">A four-person digital product studio in Dhaka. Founded 2025. Forty-plus projects delivered for eighteen clients.</p>
+          <div class="soc">
+            <a href="/contact" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.1h4.2V24H.4zM8.3 8.1h4v2.2h.06c.56-1.06 1.93-2.2 3.97-2.2 4.25 0 5.03 2.8 5.03 6.43V24h-4.2v-7.6c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8.3z"></path></svg></a>
+            <a href="/contact" aria-label="Dribbble"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm7.94 5.54a10.2 10.2 0 0 1 2.3 6.38c-.34-.07-3.73-.76-7.14-.33-.08-.18-.15-.36-.23-.55-.21-.5-.44-1-.68-1.48 3.78-1.54 5.5-3.76 5.75-4.02zM12 1.78c2.55 0 4.88.96 6.65 2.53-.21.3-1.76 2.38-5.4 3.75A52.6 52.6 0 0 0 9.4 2.13 10.3 10.3 0 0 1 12 1.78zM7.43 2.83a61 61 0 0 1 3.83 5.87C6.44 9.98 2.2 9.96 1.74 9.96A10.27 10.27 0 0 1 7.43 2.83zM1.76 12.02v-.31c.45.01 5.43.08 10.54-1.46.3.57.57 1.15.83 1.73l-.4.12c-5.28 1.7-8.08 6.36-8.32 6.75a10.2 10.2 0 0 1-2.65-6.83zM12 22.25c-2.36 0-4.53-.8-6.26-2.15.18-.38 2.28-4.4 8.05-6.42l.07-.02a42.6 42.6 0 0 1 2.2 7.8A10.2 10.2 0 0 1 12 22.25zm5.8-1.74a44.6 44.6 0 0 0-2-7.65c3.2-.51 6.02.33 6.37.44a10.25 10.25 0 0 1-4.37 7.21z"></path></svg></a>
+            <a href="/contact" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.8 18 5.1 18 5.1c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+            <a href="/contact" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.3l-5.8-7.5-6.6 7.5H.6l8.6-9.8L.2 1.2h7.5l5.2 6.9zm-1.3 19.4h2L6.5 3.2H4.4z"></path></svg></a>
+          </div>
+        </div>
+        <div><h5>Services</h5><div class="ftr-col" id="ftrServices"><a href="/services/web-development">Web Development</a><a href="/services/ui-ux-design">UI/UX Design</a><a href="/services/software-development">Software Development</a><a href="/services/ai-solutions">Artificial Intelligence</a><a href="/services/digital-marketing-seo">Digital Marketing &amp; SEO</a><a href="/services/mobile-app-development">Mobile App Development</a><a href="/services/ecommerce-corporate">E-commerce &amp; Corporate Solutions</a><a href="/services/lms-solutions">LMS Solutions</a></div></div>
+        <div><h5>Company</h5><div class="ftr-col">
+          <a href="/about">About us</a><a href="/work">Case studies</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/services">All services</a>
+        </div></div>
+        <div><h5>Studio</h5><div class="ftr-col">
+          <a href="/contact">House 42, Road 11<br>Gulshan 1, Dhaka 1212</a>
+          <a href="/contact">+880 9613 800 400</a>
+          <a href="/contact">hello@infinitedesigns.com.bd</a>
+          <a href="/careers">careers@infinitedesigns.com.bd</a>
+        </div>
+        <p class="disclosure" style="margin-top:18px">Portfolio, client names and testimonials on this site are sample content created to demonstrate the layout. Replace them with your own before going live.</p>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <span>© 2026 Infinite Designs Ltd. All rights reserved.</span>
+        <div class="links"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a><a href="/contact">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

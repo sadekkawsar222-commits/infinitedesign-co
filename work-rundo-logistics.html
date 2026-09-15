@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rundo Logistics — Infinite Designs</title>
+<meta name="description" content="A dispatch and routing platform using live traffic and delivery-history data to sequence last-mile deliveries across Dhaka.">
+<meta name="theme-color" content="#07060D">
+<link rel="canonical" href="https://infinitedesigns.com.bd/work/rundo-logistics">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infinite Designs">
+<meta property="og:title" content="Rundo Logistics — Infinite Designs">
+<meta property="og:description" content="A dispatch and routing platform using live traffic and delivery-history data to sequence last-mile deliveries across Dhaka.">
+<meta property="og:url" content="https://infinitedesigns.com.bd/work/rundo-logistics">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19' fill='none' stroke='%237B5CFF' stroke-width='9' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="lw">
+    <svg viewBox="0 0 120 60" aria-hidden="true">
+      <defs><linearGradient id="lgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs>
+      <path class="draw" d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#lgrad)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="pc" id="loadpc">00</div>
+  </div>
+</div>
+
+<canvas id="delta" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a href="/" class="brand" aria-label="Infinite Designs home">
+      <svg viewBox="0 0 120 60" aria-hidden="true"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF"/><stop offset="55%" stop-color="#6B7BFF"/><stop offset="100%" stop-color="#3AE0D0"/></linearGradient></defs><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"/></svg>
+      <span class="brand-name">Infinite Designs<small>Dhaka &middot; Bangladesh</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="/work" class="on">Work</a><a href="/services">Services</a><a href="/about">About</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a></nav>
+    <div class="hdr-cta">
+      <a href="/contact" class="btn btn-pri btn-sm" data-cursor>Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <nav id="drawerNav" aria-label="Mobile"><a href="/work" class="on"><span>Work</span><span class="idx">01</span></a><a href="/services"><span>Services</span><span class="idx">02</span></a><a href="/about"><span>About</span><span class="idx">03</span></a><a href="/insights"><span>Insights</span><span class="idx">04</span></a><a href="/careers"><span>Careers</span><span class="idx">05</span></a><a href="/contact"><span>Contact</span><span class="idx">06</span></a></nav>
+  <div class="drawer-foot">
+    <span>hello@infinitedesigns.com.bd</span><span>+880 9613 800 400</span><span>Gulshan 1, Dhaka 1212</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <main id="app">
+
+<section class="cs-hero">
+  <div class="shell">
+    <div class="breadcrumb"><a href="/work">Case studies</a> <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg> <span>Logistics</span></div>
+    <div style="margin-bottom:24px"><svg viewBox="0 0 182 28" style="height:34px" role="img" aria-label="Rundo Logistics logo">
+    <g><circle cx="7" cy="20.5" r="3.4" fill="none" stroke="#00B8D9" stroke-width="2.4"></circle><circle cx="21" cy="7.5" r="3.4" fill="none" stroke="#00B8D9" stroke-width="2.4"></circle><path d="M9.4 18.2c2.4-2.4 1-6 3.6-8.2 1.6-1.4 3.6-1.6 5.2-1.8" fill="none" stroke="#00B8D9" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 4.2"></path></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Rundo Logistics</text>
+  </svg></div>
+    <h1 style="max-width:16ch">Route intelligence for 1,800 riders in the world’s most congested city</h1>
+    <p class="lede" style="margin-top:24px">A dispatch and routing platform using live traffic and delivery-history data to sequence last-mile deliveries across Dhaka.</p>
+  </div>
+</section>
+
+<section><div class="shell"><div class="cs-art" data-par="0.04"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Rundo Logistics project visual"><defs>
+    <linearGradient id="g229" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(10,68,88)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g230" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#00B8D9" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(89,209,230)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c231"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g229)"></rect><g clip-path="url(#c231)"><circle cx="156" cy="90" r="190" fill="#00B8D9" opacity=".16"></circle><g opacity=".45"><line x1="494" y1="228" x2="405" y2="259" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="494" y1="228" x2="542" y2="176" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="494" y1="228" x2="316" y2="290" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="494" y1="228" x2="453" y2="207" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="494" y1="228" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="494" y1="228" x2="501" y2="155" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="131" y1="145" x2="268" y2="62" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="131" y1="145" x2="179" y2="93" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="131" y1="145" x2="90" y2="124" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="131" y1="145" x2="138" y2="72" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="268" y1="62" x2="179" y2="93" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="268" y1="62" x2="90" y2="124" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="268" y1="62" x2="138" y2="72" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="542" y2="176" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="316" y2="290" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="453" y2="207" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="227" y2="321" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="501" y2="155" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="405" y1="259" x2="275" y2="269" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="542" y1="176" x2="453" y2="207" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="542" y1="176" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="542" y1="176" x2="501" y2="155" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="179" y1="93" x2="90" y2="124" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="179" y1="93" x2="138" y2="72" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="316" y1="290" x2="453" y2="207" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="316" y1="290" x2="227" y2="321" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="316" y1="290" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="316" y1="290" x2="275" y2="269" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="453" y1="207" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="453" y1="207" x2="501" y2="155" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="453" y1="207" x2="275" y2="269" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="90" y1="124" x2="138" y2="72" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="227" y1="321" x2="364" y2="238" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="227" y1="321" x2="275" y2="269" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="364" y1="238" x2="501" y2="155" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line><line x1="364" y1="238" x2="275" y2="269" stroke="#00B8D9" stroke-opacity=".38" stroke-width="1"></line></g>
+      <circle cx="494" cy="228" r="7" fill="#00B8D9"></circle><circle cx="131" cy="145" r="4" fill="#ffffff40"></circle><circle cx="268" cy="62" r="4" fill="#ffffff40"></circle><circle cx="405" cy="259" r="4" fill="#ffffff40"></circle><circle cx="542" cy="176" r="7" fill="#00B8D9"></circle><circle cx="179" cy="93" r="4" fill="#ffffff40"></circle><circle cx="316" cy="290" r="4" fill="#ffffff40"></circle><circle cx="453" cy="207" r="4" fill="#ffffff40"></circle><circle cx="90" cy="124" r="7" fill="#00B8D9"></circle><circle cx="227" cy="321" r="4" fill="#ffffff40"></circle><circle cx="364" cy="238" r="4" fill="#ffffff40"></circle><circle cx="501" cy="155" r="4" fill="#ffffff40"></circle><circle cx="138" cy="72" r="7" fill="#00B8D9"></circle><circle cx="275" cy="269" r="4" fill="#ffffff40"></circle>
+      <g transform="translate(200 140)"><rect width="240" height="120" rx="14" fill="#0C0B16" stroke="#ffffff26"></rect>
+        <circle cx="46" cy="60" r="22" fill="none" stroke="#00B8D9" stroke-width="2.4"></circle><circle cx="46" cy="60" r="8" fill="#00B8D9"></circle>
+        <rect x="84" y="40" width="120" height="8" rx="4" fill="#ffffff33"></rect><rect x="84" y="58" width="90" height="7" rx="3.5" fill="#ffffff1f"></rect><rect x="84" y="76" width="64" height="12" rx="4" fill="rgb(89,209,230)" opacity=".8"></rect></g></g></svg></div></div></section>
+
+<section class="sec" style="padding-block:clamp(34px,4vw,56px)"><div class="shell">
+  <div class="cs-meta">
+    <div><i>Client</i><b>Rundo Logistics</b></div>
+    <div><i>Sector</i><b>Logistics</b></div>
+    <div><i>Engagement</i><b>17 weeks · 2026</b></div>
+    <div><i>Team</i><b>All four of us</b></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell cs-split">
+  <div class="cs-sticky">
+    <span class="mini-head">Services applied</span>
+    <div class="stack" style="gap:8px">
+      <a href="/services/ai-solutions" class="link-i" style="font-size:.88rem;border:0;padding:0">Artificial Intelligence (AI) Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/mobile-app-development" class="link-i" style="font-size:.88rem;border:0;padding:0">Mobile App Development <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/data-analytics-ai" class="link-i" style="font-size:.88rem;border:0;padding:0">Data Analytics &amp; AI-Driven Solutions <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="/services/software-development" class="link-i" style="font-size:.88rem;border:0;padding:0">Software Development <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <div style="margin-top:26px"><span class="mini-head">Technology</span><div class="tagset"><span>Python</span><span>FastAPI</span><span>OR-Tools</span><span>Flutter</span><span>PostGIS</span><span>Kafka</span><span>Redis</span><span>AWS</span></div></div>
+    <div style="margin-top:26px"><span class="mini-head">Location</span><p style="font-size:.9rem;color:var(--txt-dim)">Dhaka, Bangladesh</p></div>
+  </div>
+  <div class="d1">
+    <span class="eyebrow">The challenge</span>
+    <div class="prose" style="max-width:none;margin-top:16px"><p>Rundo’s dispatchers assigned parcels by neighbourhood and instinct. A rider in Mirpur could be routed across the city at four in the afternoon, and the same address could be attempted three times because failed deliveries carried no history.</p><p>Their cost per delivery had risen for six consecutive quarters, and the first-attempt success rate sat at 71% — every failure costing a second trip through the same traffic.</p></div>
+    <h3 style="margin-top:48px">How we approached it</h3>
+    <div class="steps" style="margin-top:20px">
+      <div class="step"><span class="n">01</span><div><h3 style="font-size:1.15rem">Learn from their own history</h3></div><div class="sd"><p>Eighteen months of delivery records became the training set: which addresses fail at which hours, which buildings need a phone call first, where the map is simply wrong.</p></div></div><div class="step"><span class="n">02</span><div><h3 style="font-size:1.15rem">Routing that understands Dhaka</h3></div><div class="sd"><p>A solver combining live traffic, historical travel times by hour and rider-reported road conditions, tuned for a city where a 4 km trip can take ninety minutes.</p></div></div><div class="step"><span class="n">03</span><div><h3 style="font-size:1.15rem">A rider app built for one hand</h3></div><div class="sd"><p>Large targets, offline capability, voice-guided sequencing and a two-tap failure reason that feeds straight back into the model.</p></div></div><div class="step"><span class="n">04</span><div><h3 style="font-size:1.15rem">Continuous evaluation</h3></div><div class="sd"><p>Weekly comparison of predicted against actual travel time per zone, with the model retrained monthly on fresh data.</p></div></div>
+    </div>
+    <h3 style="margin-top:48px">What we built</h3>
+    <ul class="list-check" style="margin-top:18px"><li>Route optimisation using live traffic and 18 months of delivery history</li><li>Address risk scoring predicting first-attempt failure before dispatch</li><li>Rider app with offline sequencing, voice guidance and one-hand operation</li><li>Automated customer notification windows narrowed to 90 minutes</li><li>Live control tower with exception alerts for dispatchers</li><li>Cost-per-delivery analytics broken down by zone and rider</li></ul>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Results</span>
+    <div class="row">
+      <h2 style="max-width:18ch">Measured against the baseline we agreed at kickoff.</h2>
+      
+    </div>
+    
+  </div>
+  <div class="results"><div class="result"><b>−31%</b><span>cost per delivery</span></div><div class="result"><b>71% → 94%</b><span>first-attempt delivery success</span></div><div class="result"><b>1,800</b><span>riders on the platform daily</span></div></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  <div class="two-col" style="align-items:center">
+    <div class="panel" style="padding:clamp(28px,4vw,48px)">
+      <blockquote style="margin:0;font-family:var(--font-display);font-size:clamp(1.2rem,2.2vw,1.75rem);line-height:1.32;letter-spacing:-.03em;color:var(--txt)">“Anyone can buy a routing engine. Making one that understands Dhaka traffic at 4pm on a Thursday took people who live here.”</blockquote>
+      <div class="who" style="display:flex;align-items:center;gap:14px;margin-top:28px">
+        <span style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid var(--line-2);flex:none;display:block"><svg viewBox="0 0 240 268" role="img" aria-label="Illustrated portrait">
+    <defs><linearGradient id="a232" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgb(34,108,108)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="a233" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3AE0D0" stop-opacity=".9"></stop><stop offset="100%" stop-color="rgb(35,134,125)"></stop></linearGradient></defs>
+    <rect width="240" height="268" fill="url(#a232)"></rect>
+    <circle cx="120" cy="120" r="78" fill="#3AE0D0" opacity=".13"></circle>
+    <path d="M40 268c0-42 36-62 80-62s80 20 80 62z" fill="url(#a233)"></path>
+    <path d="M96 176h48v26H96z" fill="#A96E46"></path>
+    
+    <ellipse cx="120" cy="120" rx="42" ry="50" fill="#A96E46"></ellipse>
+    <path d="M78 112c0-28 18-46 42-46s42 18 42 46c0 4-2 8-2 8-4-16-12-24-24-26-14-2-24 4-32 12-6 6-10 14-12 22 0 0-14-8-14-16z" fill="#2A1C18"></path>
+    <ellipse cx="104" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse><ellipse cx="136" cy="118" rx="4" ry="5" fill="#120F1A"></ellipse>
+    <path d="M110 136q10 8 20 0" fill="none" stroke="#120F1A" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M120 122v9" fill="none" stroke="rgb(110,72,46)" stroke-width="2.4" stroke-linecap="round"></path>
+    
+    
+    <path d="M96 206 v62" stroke="rgb(46,182,217)" stroke-width="2" opacity=".4"></path>
+  </svg></span>
+        <span><b style="display:block;font-size:.96rem">Shakib Hossain</b><span style="display:block;font-size:.83rem;color:var(--txt-faint)">Head of Operations, Rundo Logistics</span></span>
+      </div>
+    </div>
+    <div class="cs-art d1"><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Rundo Logistics project visual"><defs>
+    <linearGradient id="g234" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(10,68,88)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g235" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#00B8D9" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(89,209,230)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c236"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g234)"></rect><g clip-path="url(#c236)"><circle cx="341" cy="90" r="190" fill="#00B8D9" opacity=".16"></circle>
+      <g opacity=".6"><circle cx="320" cy="200" r="58" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="98" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="138" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="178" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="218" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="258" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle><circle cx="320" cy="200" r="298" fill="none" stroke="#ffffff" stroke-opacity=".045"></circle></g>
+      <g transform="translate(236 34)">
+        <rect width="168" height="332" rx="28" fill="#0C0B16" stroke="#ffffff26" stroke-width="1.5"></rect>
+        <rect x="8" y="8" width="152" height="316" rx="22" fill="rgb(8,48,62)"></rect>
+        <rect x="62" y="16" width="44" height="7" rx="3.5" fill="#ffffff2a"></rect>
+        <rect x="24" y="44" width="70" height="9" rx="4.5" fill="#ffffff33"></rect>
+        <rect x="24" y="64" width="120" height="58" rx="12" fill="url(#g235)"></rect>
+        <rect x="38" y="80" width="42" height="6" rx="3" fill="#00000055"></rect><rect x="38" y="94" width="66" height="12" rx="4" fill="#00000077"></rect>
+        <g transform="translate(24 136)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#00B8D9"></circle><rect x="33" y="9" width="44" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 176)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="56" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 216)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="68" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g><g transform="translate(24 256)"><rect width="120" height="30" rx="9" fill="#ffffff0d"></rect><circle cx="17" cy="15" r="8" fill="#ffffff26"></circle><rect x="33" y="9" width="80" height="5" rx="2.5" fill="#ffffff33"></rect><rect x="33" y="19" width="30" height="4" rx="2" fill="#ffffff1f"></rect></g>
+        <rect x="24" y="300" width="120" height="14" rx="7" fill="#00B8D9" opacity=".9"></rect>
+      </g>
+      <g transform="translate(60 96)" opacity=".92"><rect width="150" height="94" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><rect x="16" y="18" width="52" height="6" rx="3" fill="#ffffff2e"></rect><path d="M16 74 L44 56 L68 64 L94 40 L118 50 L134 34" fill="none" stroke="#00B8D9" stroke-width="2.6" stroke-linecap="round"></path></g>
+      <g transform="translate(430 190)" opacity=".92"><rect width="150" height="110" rx="13" fill="#0D0C18" stroke="#ffffff1f"></rect><circle cx="40" cy="55" r="26" fill="none" stroke="#ffffff1a" stroke-width="8"></circle><circle cx="40" cy="55" r="26" fill="none" stroke="rgb(89,209,230)" stroke-width="8" stroke-dasharray="139 164" stroke-linecap="round" transform="rotate(-90 40 55)"></circle><rect x="80" y="38" width="52" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="80" y="55" width="36" height="14" rx="4" fill="#00B8D9"></rect></g></g></svg></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="shell">
+  
+  <div class="sec-head">
+    <span class="eyebrow">Next case study</span>
+    <div class="row">
+      <h2 style="max-width:18ch">A furniture storefront where the delivery promise is finally true</h2>
+      <div><a href="/work" class="btn btn-ghost" data-cursor="">All case studies<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+    
+  </div>
+  <div class="work-grid" style="grid-template-columns:1fr">
+  <a href="/work/aurelia-living" class="work-card d1" data-sector="E-commerce" data-cursor-big="">
+    <div class="work-thumb"><span class="tag">E-commerce · 2025</span><svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Aurelia Living project visual"><defs>
+    <linearGradient id="g237" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgb(71,51,45)"></stop><stop offset="100%" stop-color="#0A0912"></stop></linearGradient>
+    <linearGradient id="g238" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#C08552" stop-opacity=".95"></stop><stop offset="100%" stop-color="rgb(214,176,143)" stop-opacity=".55"></stop></linearGradient>
+    <clipPath id="c239"><rect width="640" height="400" rx="0"></rect></clipPath>
+  </defs>
+  <rect width="640" height="400" fill="url(#g237)"></rect><g clip-path="url(#c239)"><circle cx="194" cy="90" r="190" fill="#C08552" opacity=".16"></circle>
+      <path d="M0 400 C 160 300 220 360 340 280 C 460 200 520 250 640 170 L640 400Z" fill="#C08552" opacity=".1"></path>
+      <rect x="44" y="44" width="552" height="312" rx="16" fill="#0D0C18" stroke="#ffffff1f"></rect>
+      <rect x="44" y="44" width="552" height="46" rx="16" fill="rgb(94,67,52)"></rect><rect x="44" y="74" width="552" height="16" fill="rgb(94,67,52)"></rect>
+      <rect x="66" y="60" width="74" height="13" rx="6.5" fill="#C08552"></rect>
+      <rect x="210" y="63" width="34" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="272" y="63" width="38" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="334" y="63" width="42" height="7" rx="3.5" fill="#ffffff2e"></rect><rect x="396" y="63" width="46" height="7" rx="3.5" fill="#ffffff2e"></rect>
+      <circle cx="560" cy="67" r="9" fill="none" stroke="#ffffff44" stroke-width="2"></circle>
+      <g transform="translate(68 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(250 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(130,91,63)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(432 112)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(68 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(130,91,63)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(250 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="#ffffff14"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g><g transform="translate(432 236)"><rect width="164" height="106" rx="11" fill="#ffffff07" stroke="#ffffff14"></rect><rect x="12" y="12" width="62" height="62" rx="9" fill="rgb(130,91,63)"></rect><rect x="86" y="18" width="62" height="7" rx="3.5" fill="#ffffff33"></rect><rect x="86" y="34" width="44" height="6" rx="3" fill="#ffffff1c"></rect><rect x="86" y="54" width="40" height="15" rx="5" fill="#C08552"></rect><rect x="12" y="84" width="140" height="8" rx="4" fill="#ffffff12"></rect></g></g></svg></div>
+    <div class="work-body">
+      <div class="cl"><svg viewBox="0 0 166 28" style="height:20px" role="img" aria-label="Aurelia Living logo">
+    <g><path d="M4.5 24V13a9.5 9.5 0 0 1 19 0v11" fill="none" stroke="#C08552" stroke-width="2.5" stroke-linecap="round"></path><path d="M10 24v-9.6a4 4 0 0 1 8 0V24" fill="none" stroke="#C08552" stroke-width="2.5" stroke-linecap="round" opacity=".45"></path></g>
+    <text x="37" y="19.6" font-family="'Bricolage Grotesque','Trebuchet MS',sans-serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#EDEBF7">Aurelia Living</text>
+  </svg></div>
+      <h3>A furniture storefront where the delivery promise is finally true</h3>
+      <p>A rebuilt commerce experience joining showroom stock, warehouse inventory and courier capacity into a single, honest delivery date.</p>
+      <div class="work-kpis"><span class="kpi"><b>+38%</b>checkout conversion</span><span class="kpi"><b>29% → 6%</b>post-order cancellation rate</span><span class="kpi"><b>2.8×</b>organic traffic in twelve</span></div>
+    </div>
+  </a></div>
+</div></section>
+
+  <section class="sec"><div class="shell">
+    <div class="cta-band" data-par="-0.05">
+      <span class="eyebrow solo" style="justify-content:center">Start a conversation</span>
+      <h2 style="margin-top:16px">Let’s work out whether we’re the right studio for this.</h2>
+      <p class="lede">Tell us what you’re trying to build. You’ll get a senior person on the first call — not a salesperson — and an honest answer about scope, budget and timeline within two working days.</p>
+      <div class="acts"><a href="/contact" class="btn btn-pri" data-cursor="">Start a project<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a><a href="/work" class="btn btn-ghost" data-cursor="">See how we work<svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></div>
+    </div>
+  </div></section>
+  </main>
+
+<footer class="ftr">
+    <div class="shell">
+      <div class="ftr-top">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:18px">
+            <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 30c0-11 8-19 17-19s13 7 17 13 8 13 17 13 17-8 17-19-8-19-17-19-13 7-17 13-8 13-17 13-17-8-17-19" fill="none" stroke="url(#bgrad)" stroke-width="7" stroke-linecap="round"></path></svg>
+            <span class="brand-name">Infinite Designs<small>Est. 2025</small></span>
+          </a>
+          <p style="color:var(--txt-dim);font-size:.92rem;max-width:34ch;line-height:1.65">A four-person digital product studio in Dhaka. Founded 2025. Forty-plus projects delivered for eighteen clients.</p>
+          <div class="soc">
+            <a href="/contact" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.1h4.2V24H.4zM8.3 8.1h4v2.2h.06c.56-1.06 1.93-2.2 3.97-2.2 4.25 0 5.03 2.8 5.03 6.43V24h-4.2v-7.6c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8.3z"></path></svg></a>
+            <a href="/contact" aria-label="Dribbble"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm7.94 5.54a10.2 10.2 0 0 1 2.3 6.38c-.34-.07-3.73-.76-7.14-.33-.08-.18-.15-.36-.23-.55-.21-.5-.44-1-.68-1.48 3.78-1.54 5.5-3.76 5.75-4.02zM12 1.78c2.55 0 4.88.96 6.65 2.53-.21.3-1.76 2.38-5.4 3.75A52.6 52.6 0 0 0 9.4 2.13 10.3 10.3 0 0 1 12 1.78zM7.43 2.83a61 61 0 0 1 3.83 5.87C6.44 9.98 2.2 9.96 1.74 9.96A10.27 10.27 0 0 1 7.43 2.83zM1.76 12.02v-.31c.45.01 5.43.08 10.54-1.46.3.57.57 1.15.83 1.73l-.4.12c-5.28 1.7-8.08 6.36-8.32 6.75a10.2 10.2 0 0 1-2.65-6.83zM12 22.25c-2.36 0-4.53-.8-6.26-2.15.18-.38 2.28-4.4 8.05-6.42l.07-.02a42.6 42.6 0 0 1 2.2 7.8A10.2 10.2 0 0 1 12 22.25zm5.8-1.74a44.6 44.6 0 0 0-2-7.65c3.2-.51 6.02.33 6.37.44a10.25 10.25 0 0 1-4.37 7.21z"></path></svg></a>
+            <a href="/contact" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.8 18 5.1 18 5.1c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+            <a href="/contact" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.3l-5.8-7.5-6.6 7.5H.6l8.6-9.8L.2 1.2h7.5l5.2 6.9zm-1.3 19.4h2L6.5 3.2H4.4z"></path></svg></a>
+          </div>
+        </div>
+        <div><h5>Services</h5><div class="ftr-col" id="ftrServices"><a href="/services/web-development">Web Development</a><a href="/services/ui-ux-design">UI/UX Design</a><a href="/services/software-development">Software Development</a><a href="/services/ai-solutions">Artificial Intelligence</a><a href="/services/digital-marketing-seo">Digital Marketing &amp; SEO</a><a href="/services/mobile-app-development">Mobile App Development</a><a href="/services/ecommerce-corporate">E-commerce &amp; Corporate Solutions</a><a href="/services/lms-solutions">LMS Solutions</a></div></div>
+        <div><h5>Company</h5><div class="ftr-col">
+          <a href="/about">About us</a><a href="/work">Case studies</a><a href="/insights">Insights</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/services">All services</a>
+        </div></div>
+        <div><h5>Studio</h5><div class="ftr-col">
+          <a href="/contact">House 42, Road 11<br>Gulshan 1, Dhaka 1212</a>
+          <a href="/contact">+880 9613 800 400</a>
+          <a href="/contact">hello@infinitedesigns.com.bd</a>
+          <a href="/careers">careers@infinitedesigns.com.bd</a>
+        </div>
+        <p class="disclosure" style="margin-top:18px">Portfolio, client names and testimonials on this site are sample content created to demonstrate the layout. Replace them with your own before going live.</p>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <span>© 2026 Infinite Designs Ltd. All rights reserved.</span>
+        <div class="links"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a><a href="/contact">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>
